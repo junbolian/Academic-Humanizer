@@ -2,15 +2,17 @@
 
 **Remove the AI tone from academic writing and keep every number, equation, citation, and theorem exactly as you wrote it.**
 
-[中文说明](docs/zh-CN/README.md) · [PDF guide](docs/academic-humanizer-v1.0-en.pdf) · v1.0 · MIT License
+**English** | [简体中文](README.zh-CN.md)
+
+[PDF guide](docs/academic-humanizer-v1.0-en.pdf) · v1.0 · MIT License
 
 Academic Humanizer is an agent skill for editing and drafting manuscripts, theses, referee responses, and grant proposals in English and Chinese. It runs in Claude, OpenAI Codex, ChatGPT, and any agent that reads `SKILL.md`. A bundled checker verifies every edit, so the science in the text stays the science you wrote.
 
 ## What it removes
 
-- **Stock phrases and AI vocabulary.** delve, pivotal, sheds light on, "In recent years, X has attracted increasing attention", 近年来, 具有重要的理论意义和现实意义.
-- **Sentence patterns typical of model output.** Invented contrasts ("The barrier is not technology but understanding", 不是……而是), cue colons ("The key insight is:", 一句话总结：), restatement sentences ("This means that", 这意味着), adjacent sentences built on one skeleton, rhetorical lists, and ordinal headings.
-- **Meta-narrative and defensive writing.** "In this section, we ...", "To summarize, ...", 本节将介绍, self-deprecation ("only a preliminary attempt", 抛砖引玉), and stacked hedges ("may potentially suggest").
+- **Stock phrases and AI vocabulary.** delve, pivotal, sheds light on, "In recent years, X has attracted increasing attention", "has important theoretical and practical significance", and their Chinese counterparts.
+- **Sentence patterns typical of model output.** Invented contrasts ("The barrier is not technology but understanding"), cue colons ("The key insight is:"), restatement sentences ("This means that"), adjacent sentences built on one skeleton, rhetorical lists, and ordinal headings.
+- **Meta-narrative and defensive writing.** "In this section, we ...", "To summarize, ...", self-deprecation ("only a preliminary attempt"), and stacked hedges ("may potentially suggest").
 - **Figurative language and dashes.** Persona metaphors ("acts as a tireless reviewer"), figurative labels, and dashes used as punctuation.
 - **Claims that miss their evidence.** "Significantly" without a test, "optimal" where the theorem proves consistency, a vague "large gain" where the paper reports 3.1%, and hedges on results the paper itself proves.
 
@@ -51,8 +53,9 @@ Plain requests trigger the skill.
 
 - "Polish the introduction in `paper.tex`."
 - "This abstract is final. Remove the AI tone only."
-- "只去 AI 味，不要改内容。"
 - "Draft a reply to Reviewer 2, comment 3. We added Section 5.2."
+
+Requests written in Chinese work the same way.
 
 The agent returns the full revised text and a short report: changes grouped by rule, claims rescoped, placeholders to fill, structural notes, and the checker's verdict.
 
@@ -87,7 +90,8 @@ The three removed qualifiers hedged numbers that the paper reports in its own ta
 academic-humanizer/          the skill: SKILL.md, references/, scripts/, agents/openai.yaml
 platforms/                   instructions for ChatGPT GPTs and projects
 docs/                        English PDF guide
-docs/zh-CN/                  中文说明, SKILL.md 中文译本, 中文 PDF
+docs/zh-CN/                  Chinese translation of SKILL.md and Chinese PDF guide
+README.zh-CN.md              Chinese README
 ```
 
 ## License

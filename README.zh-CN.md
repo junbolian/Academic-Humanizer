@@ -2,7 +2,9 @@
 
 **去掉学术写作里的 AI 腔，数字、公式、引用和定理一字不改。**
 
-[English](../../README.md) · [中文 PDF 指南](academic-humanizer-v1.0-zh.pdf) · [SKILL.md 中文译本](SKILL.zh-CN.md) · v1.0 · MIT 许可
+[English](README.md) | **简体中文**
+
+[中文 PDF 指南](docs/zh-CN/academic-humanizer-v1.0-zh.pdf) · [SKILL.md 中文译本](docs/zh-CN/SKILL.zh-CN.md) · v1.0 · MIT 许可
 
 Academic Humanizer 是一个用于编辑和起草学术文本的智能体 skill，处理中英文论文、学位论文、审稿回复和基金申请书。它可以在 Claude、OpenAI Codex、ChatGPT 以及任何读取 `SKILL.md` 的智能体中运行。附带的核对脚本逐项检查每一次修改，保证文中的科学内容仍是作者写下的内容。
 
@@ -41,7 +43,7 @@ cp -r Academic-Humanizer/academic-humanizer ~/.claude/skills/
 
 **OpenAI Codex**：把文件夹复制到 `~/.agents/skills/`（所有项目可用），或复制到某个仓库的 `.agents/skills/`。用 `$academic-humanizer` 调用，或由 Codex 按任务自动选用。
 
-**ChatGPT**：Business、Enterprise 和 Edu 用户在侧边栏 Plugins 中打开 Skills，选择 Create，再选 Upload from your computer 上传 zip。其他方案的用户新建一个 GPT 或项目，把 [`platforms/chatgpt-instructions.md`](../../platforms/chatgpt-instructions.md) 粘贴到指令栏，上传 `academic-humanizer` 文件夹中的文件，并打开代码执行功能。
+**ChatGPT**：Business、Enterprise 和 Edu 用户在侧边栏 Plugins 中打开 Skills，选择 Create，再选 Upload from your computer 上传 zip。其他方案的用户新建一个 GPT 或项目，把 [`platforms/chatgpt-instructions.md`](platforms/chatgpt-instructions.md) 粘贴到指令栏，上传 `academic-humanizer` 文件夹中的文件，并打开代码执行功能。
 
 **其他智能体**：把 `SKILL.md` 作为指令加载，并让智能体能够读取 `references/` 和 `scripts/`。
 
@@ -78,4 +80,4 @@ python3 academic-humanizer/scripts/check_revision.py compare paper.tex revised.t
 
 ## 许可
 
-MIT，见 [LICENSE](../../LICENSE)。
+MIT，见 [LICENSE](LICENSE)。
