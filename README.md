@@ -16,7 +16,7 @@ Academic Humanizer is an agent skill for editing and drafting manuscripts, these
 
 ## What it keeps
 
-Numbers, equations, citation keys, `\ref` and `\label` keys, the text of definitions, assumptions, and theorems, the LaTeX preamble, and every qualifier that expresses real uncertainty. Edits add no names, numbers, quotations, sources, or examples. A claim that needs evidence the text lacks receives a visible `[[EVIDENCE: ...]]` placeholder for the author to fill.
+Numbers, equations, citation keys, `\ref` and `\label` keys, the text of definitions, assumptions, and theorems, the LaTeX preamble, and every qualifier that expresses real uncertainty. Edits add no names, numbers, quotations, sources, or examples. A claim that needs evidence the text lacks receives a visible `[[EVIDENCE: ...]]` placeholder for the author to fill. While any placeholder remains, the report opens with a warning that the text is not ready to submit, and the checker ends its output with a `NOT READY TO SUBMIT` line.
 
 Results that the evidence supports read as results. The voice the skill produces is that of a confident scholar: specific, assertive, and exact about scope.
 

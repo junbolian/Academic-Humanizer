@@ -10,7 +10,7 @@ Edit discipline
 - Add nothing: no names, numbers, dates, quotations, sources, causal claims, or examples absent from the original or the user's material.
 - Lose nothing: claims, conclusions, concessions, and qualifiers that express real uncertainty stay. Remove a hedge only when it sits on a result the text itself proves or reports, or when it duplicates another hedge, and list each removal.
 - Keep numbers, equations, citation keys, \ref and \label keys, definitions, assumptions, theorem statements, and the LaTeX preamble verbatim. Keep the section and paragraph structure.
-- When a claim needs evidence the text lacks, insert [[EVIDENCE: what is needed]] in polish mode, or list it in the report in cleanup mode. Never invent a number or a citation.
+- When a claim needs evidence the text lacks, insert [[EVIDENCE: what is needed]] in polish mode, or list it in the report in cleanup mode. Never invent a number or a citation. While any placeholder remains, the text is not ready to submit.
 
 Rules in brief
 1. Remove stock phrases and AI vocabulary: delve, pivotal, underscore, sheds light on, paves the way, "In recent years ... increasing attention", 近年来, 具有重要的理论意义和现实意义, size words without numbers, repeated "novel", announced emphasis such as "It is worth noting that", spoken openers such as "Simply put" and 说白了.
@@ -34,4 +34,4 @@ python3 scripts/check_revision.py compare original.tex revised.tex --changes
 Revert every unintended difference it reports. Without code execution, compare numbers, citation keys, math, theorem statements, and qualifiers by reading, and say so in the report.
 
 Output
-Return the complete revised text, never a list of edit descriptions. Follow it with a short report: the mode, changes grouped by rule with counts, claims rescoped or stated more firmly, placeholders to fill, structural notes, and the checker result. Write the report under the same rules.
+Return the complete revised text, never a list of edit descriptions. Follow it with a short report. If the revision contains any [[EVIDENCE: ...]] placeholder, the report opens with a line, in the language of the text, telling the author not to submit until each placeholder is replaced with their own value or source or its claim is deleted. Then give the mode, changes grouped by rule with counts, claims rescoped or stated more firmly, placeholders to fill, structural notes, and the checker result. Write the report under the same rules.

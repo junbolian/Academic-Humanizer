@@ -113,7 +113,7 @@ Each pattern below appears at a clearly higher rate in model output than in huma
 - When a summary phrase ("substantially improves", "a large gain", 显著提升, 实现了效率的提升) stands where the same or the next paragraph gives the number, date, or object, put that specific value in its place. When the text gives no number, restore the plain verb ("achieves an improvement in accuracy" becomes "improves accuracy", 完成了对流程的优化 becomes 优化了流程) and add nothing.
 - Each empirical claim points to its evidence, a table, figure, test, or citation, and its verb matches that evidence: "show" or "find" for what the reported results exhibit, "suggest" or "is consistent with" for indirect evidence. "Prove" is reserved for proofs.
 - Replace a vague magnitude with the number the paper reports, with its metric, comparator, and sample: "reduces mean absolute error by 3.1% relative to the strongest baseline (Table 4)".
-- Numbers, test results, table and figure references, and citations come only from the supplied material. When a sentence needs evidence that was not supplied, insert the visible placeholder `[[EVIDENCE: what is needed]]`, written in LaTeX as `\textbf{[[EVIDENCE: what is needed]]}` with plain words inside (no `%`, `_`, `&`, `#`). The script lists every placeholder and excludes its contents from the comparison. A placeholder is a correct output, and a plausible number is a fabrication. Cleanup mode lists the need in the report instead.
+- Numbers, test results, table and figure references, and citations come only from the supplied material. When a sentence needs evidence that was not supplied, insert the visible placeholder `[[EVIDENCE: what is needed]]`, written in LaTeX as `\textbf{[[EVIDENCE: what is needed]]}` with plain words inside (no `%`, `_`, `&`, `#`). The script lists every placeholder and excludes its contents from the comparison. A placeholder is a correct output, and a plausible number is a fabrication. A text that still contains a placeholder is not ready to submit, and the report says so (see Output). Cleanup mode lists the need in the report instead.
 - Report the statistic the paper computed, a mean with its standard error or confidence interval, a median, or a range, together with its aggregation. One statistic is never converted into another.
 - Compare against the strongest baseline first.
 - "Significant" and "significantly" require a stated test. Without one, give the difference and drop the word.
@@ -208,7 +208,7 @@ Use the script's structure output and a full reading. Report:
 - No dash used as punctuation, no paragraph crowded with semicolons or asides, and no figurative or persona label outside established terms.
 - Summary phrases with a specific value nearby now carry that value, and nominalized verbs are restored.
 - Empirical verbs match their evidence, proven results carry their conditions, and established results read as established, without apology or defence.
-- Every missing piece of evidence is a placeholder in polish mode or a report item in cleanup mode.
+- Every missing piece of evidence is a placeholder in polish mode or a report item in cleanup mode, and any remaining placeholder is announced at the top of the report as blocking submission.
 - None of the "Not reasons to change" features was edited for its own sake.
 - `compare` reports numbers, citation keys, labels, math, and formal statements unchanged, or lists each difference as intended.
 
@@ -216,6 +216,7 @@ Use the script's structure output and a full reading. Report:
 
 1. The complete revised text. A `.tex` or other file input comes back as the full revised file, never as a list of edit descriptions.
 2. A short report, written under the same Rules:
+   - when the revised text contains any `[[EVIDENCE: ...]]` placeholder, a first line, in the language of the text, telling the author that the text is not ready to submit: each placeholder must be replaced with a value or source from their own data, or its claim deleted, before the text goes to a journal, conference, or reviewer;
    - the mode and, if used, the style reference;
    - changes grouped by Rule, with counts;
    - claims scoped, strengthened under Rule 7, or given evidence pointers;

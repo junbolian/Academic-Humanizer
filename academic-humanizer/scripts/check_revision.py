@@ -25,6 +25,9 @@ compare  Checks that numbers, citation keys, \\ref/\\label keys, math, the text 
          exit status. The contents of [[EVIDENCE: ...]] placeholders are excluded from
          these checks and listed.
 
+Both modes end with a NOT READY TO SUBMIT line while any [[EVIDENCE: ...]]
+placeholder remains in the checked (or revised) file.
+
 Every audit hit is a candidate for review, not a verdict. Standard library only.
 """
 import argparse
@@ -1000,6 +1003,12 @@ def audit(D, lex, max_words, max_zh, verbose, base=None):
             print('  numbered results in main text (theorem/proposition/lemma/corollary): %d' % n_res)
 
 
+def placeholder_warning(D):
+    if D.placeholders:
+        print('\n!! NOT READY TO SUBMIT: %d [[EVIDENCE: ...]] placeholder(s) remain. Replace each with a value '
+              "or source from the author's own data, or delete the claim, before submission." % len(D.placeholders))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('mode', choices=['audit', 'compare'])
@@ -1018,6 +1027,7 @@ def main():
         print('file: %s  (%s%s)' % (a.files[0], 'LaTeX' if D.latex else 'Markdown' if D.markdown else 'plain text',
                                    ', Chinese' if D.chinese else ''))
         audit(D, lex, a.max_words, a.max_zh_chars, a.verbose)
+        placeholder_warning(D)
         return 0
     if len(a.files) != 2:
         ap.error('compare takes ORIGINAL REVISED')
@@ -1042,6 +1052,7 @@ def main():
     if w:
         print('\n  %d conservation warning group(s): check that each listed item is intended' % w)
     audit(B, lex, a.max_words, a.max_zh_chars, a.verbose, base=A)
+    placeholder_warning(B)
     return 0 if ok else 1
 
 
