@@ -1,0 +1,364 @@
+# academic-humanizer candidate lexicon, read by scripts/check_revision.py.
+#
+# Pattern lines:   category  python-regex        (matched case-insensitively, per line)
+# Category lines:  @category  kind  description   (kind: remove = usually rewrite;
+#                                                  verify = correct only when the evidence
+#                                                  or the proven statement supports it)
+# Every hit is a candidate for review. Established technical terms stay (SKILL.md, Rule 2).
+# Edit freely: add a line to catch a new phrase, delete a line that fires on your field's terms.
+
+@ai_vocab remove vocabulary typical of LLM output
+ai_vocab \bdelv(e|es|ed|ing)\b
+ai_vocab \bunderscor(e|es|ed|ing)\b
+ai_vocab \bintricat(e|ely|acies|acy)\b
+ai_vocab \btapestry\b
+ai_vocab \btestament\b
+ai_vocab \bpivotal\b
+ai_vocab \bshowcas(e|es|ed|ing)\b
+ai_vocab \bfoster(s|ed|ing)?\b
+ai_vocab \brealms?\b
+ai_vocab \bseamless(ly)?\b
+ai_vocab \bharness(es|ed|ing)?\b
+ai_vocab \bmultifaceted\b
+ai_vocab \bnuanced?\b
+ai_vocab \bholistic(ally)?\b
+ai_vocab \bmeticulous(ly)?\b
+ai_vocab \bcommendabl(e|y)\b
+ai_vocab \bnoteworthy\b
+ai_vocab \bparamount\b
+ai_vocab \binvaluable\b
+ai_vocab \bvibrant\b
+ai_vocab \bembark(s|ed|ing)?\b
+ai_vocab \bunveil(s|ed|ing)?\b
+ai_vocab \bcutting[- ]edge\b
+ai_vocab \bever[- ](evolving|changing|growing|increasing)\b
+ai_vocab \bcrucial(ly)?\b
+ai_vocab \bvital\b
+ai_vocab \bmyriad\b
+ai_vocab \bplethora\b
+ai_vocab \bsynerg(y|ies|istic)\b
+ai_vocab \bdeep dive\b
+ai_vocab \bstreamlin(e|es|ed|ing)\b
+ai_vocab \bcomprehensive(ly)?\b
+
+@hype remove significance claims without content
+hype \bpav(e|es|ed|ing) the way\b
+hype \b(a|an|the) (crucial|pivotal|key|critical|significant|important|major) step (toward|towards|forward)\b
+hype \bopen(s|ed|ing)? (up )?(new|novel|exciting|promising) (avenues|directions|possibilities|opportunities|doors)\b
+hype \bshed(s|ding)? (new |some )?light (on|upon)\b
+hype \bbridg(e|es|ed|ing) (the|this|a|that) gap\b
+hype \bof (paramount|utmost|great|critical|vital) importance\b
+hype \brevolutioni[sz](e|es|ed|ing)\b
+hype \btransformative\b
+hype \bgroundbreaking\b
+hype \bgame[- ]chang(er|ers|ing)\b
+hype \bunprecedented\b
+hype \bremarkabl(e|y)\b
+hype \bdramatic(ally)?\b
+hype \bprofound(ly)?\b
+hype \bstriking(ly)?\b
+hype \b(new|novel) paradigm\b
+hype \bparadigm shift\b
+hype \bpioneer(s|ed|ing)?\b
+
+@opener remove formulaic openers
+opener \bin recent (years|decades)\b
+opener \bwith the (rapid|fast|continuous|swift|ongoing|explosive) (development|growth|advance|advancement|evolution|rise|proliferation)s? of\b
+opener \b(has|have) (attracted|received|garnered|drawn|gained) (increasing|growing|considerable|significant|much|extensive|widespread|great) (attention|interest)\b
+opener \bdespite (recent|significant|remarkable|substantial|great|tremendous) (advances|progress|advancements|success|efforts)\b
+opener \bplay(s|ed|ing)? an? (crucial|important|vital|key|pivotal|critical|significant|essential|central) role\b
+opener \bin today'?s\b
+opener \bin the (era|age) of\b
+
+@intensifier remove size words without numbers
+intensifier \bextensive (experiments|numerical|simulations?|evaluations?|studies|analys[ie]s|computational)\b
+intensifier \b(thorough|rigorous|systematic) (experiments|evaluations?|analys[ie]s|numerical stud(y|ies)|benchmarks?)\b
+intensifier \ba (wide|broad|diverse) (range|variety|spectrum|array|set) of\b
+intensifier \bnumerous\b
+intensifier \bvarious\b
+intensifier \bsubstantial(ly)?\b
+intensifier \bconsiderabl(e|y)\b
+intensifier \bgreatly\b
+intensifier \bwidely (studied|used|adopted|recogni[sz]ed|acknowledged|accepted|applied|investigated|discussed)\b
+
+@novelty remove novelty padding
+novelty \bnovel\b
+novelty \bto the best of (our|my) knowledge\b
+novelty \bfor the first time\b
+novelty \b(the )?first (work|paper|study|attempt|framework|method|approach) to\b
+novelty \bwe are the first\b
+
+@emphasis remove announced emphasis
+emphasis \bit is (worth|important) (noting|mentioning|to note|to mention|to emphasi[sz]e|to highlight)\b
+emphasis \bit should be (noted|emphasi[sz]ed|pointed out|mentioned|stressed|highlighted)\b
+emphasis \b(importantly|interestingly|notably|surprisingly|intriguingly),
+emphasis \bneedless to say\b
+emphasis \b(clearly|obviously|evidently|undoubtedly|indeed),
+
+@connective remove additive connectives (a problem when they open consecutive sentences)
+connective \b(moreover|furthermore|additionally)\b
+
+@figurative remove figurative language; state the mechanism instead
+figurative \bthrough the lens of\b
+figurative \bcornerstones?\b
+figurative \bblueprints?\b
+figurative \bdouble[- ]edged\b
+figurative \bsweet spots?\b
+figurative \bunlock(s|ed|ing)?\b
+figurative \barms race\b
+figurative \bholy grail\b
+figurative \bsilver bullet\b
+figurative \b(at|lies at|lie at) the (heart|core) of\b
+figurative \bjourney\b
+figurative \btip of the iceberg\b
+figurative \bgrappl(e|es|ed|ing)\b
+figurative \btackl(e|es|ed|ing)\b
+figurative \bspark(s|ed|ing)?\b
+figurative \bpillars?\b
+figurative \bnorth star\b
+figurative \bplaybook\b
+figurative \bnew era\b
+figurative \bdawn of\b
+figurative \bthe devil is in\b
+figurative \bpaint(s|ed|ing)? a (clear |vivid |full )?picture\b
+figurative \bdouble down\b
+figurative \bmoving target\b
+figurative \blow-hanging fruit\b
+
+@figurative_or_technical verify figurative in general prose, technical in some fields; keep only the technical use
+figurative_or_technical \blandscapes?\b
+figurative_or_technical \blens(es)?\b
+figurative_or_technical \broad ?maps?\b
+figurative_or_technical \bnavigat(e|es|ed|ing|ion)\b
+figurative_or_technical \becosystems?\b
+figurative_or_technical \bfuel(s|ed|ing|led|ling)?\b
+figurative_or_technical \bbackbones?\b
+figurative_or_technical \bheuristic(s|ally)?\b
+figurative_or_technical \bbatter(y|ies)\b
+figurative_or_technical \bleverag(e|es|ed|ing)\b
+figurative_or_technical \btoolkit\b
+figurative_or_technical \brecipes?\b
+figurative_or_technical \bpuzzl(e|es|ing)\b
+figurative_or_technical \bbattle\b
+figurative_or_technical \bweapon(s|i[sz]e)?\b
+figurative_or_technical \bhidden costs?\b
+figurative_or_technical \bmirror(s|ed|ing)?\b
+
+@copula remove copula avoidance
+copula \bserv(e|es|ed|ing) as (a|an|the)\b
+copula \bstands? as (a|an|the)\b
+
+@parallelism remove negative parallelism or contrast used for emphasis
+parallelism \bnot (just|only|merely|simply) .{1,60}?,? but (also )?
+parallelism \bnot because .{1,60}? but because\b
+
+@ing_tail remove -ing clause adding a vague evaluation
+ing_tail ,\s*(highlighting|underscoring|showcasing|emphasi[sz]ing|reflecting|illustrating|signal(l)?ing|reinforcing|paving|marking|cementing)\b
+
+@vague_hedge remove vague hedges; quantify or cut
+vague_hedge \bsomewhat\b
+vague_hedge \bfairly\b
+vague_hedge \bto (some|a certain|a large|a great) (extent|degree)\b
+vague_hedge \bquite\b
+vague_hedge \brelatively\b
+
+@implications remove boilerplate about insights and implications
+implications \b(rich|valuable|important|useful|meaningful|deep|novel|new|fresh|key) (managerial |practical |theoretical |policy )?insights?\b
+implications \b(important|significant|profound|far-reaching) (managerial |practical |policy )?implications\b
+implications \bwin[- ]win\b
+implications \bdelicate (balance|trade-?off)\b
+implications \binterplay\b
+implications \bcounter-?intuitiv(e|ely)\b
+implications \b(provides?|offers?) (a )?(new|novel|fresh|unique) (perspective|angle|viewpoint)\b
+implications \b(theoretical and practical|practical and theoretical) (significance|implications|value|contributions?)\b
+implications \bshould (carefully|judiciously|wisely) (consider|balance|weigh|design|evaluate)\b
+
+@response remove referee-response boilerplate
+response \b(sincerely|deeply|greatly|truly|really) (thank|appreciate|grateful)\b
+response \b(insightful|valuable|constructive|thoughtful|excellent|helpful|careful|great) (comment|suggestion|feedback|question|remark|point)s?\b
+response \bwe (fully|completely|totally|wholeheartedly|strongly) agree\b
+response \bcarefully (revised|addressed|considered|checked|read)\b
+
+@scope verify claim verbs and quantifiers; check each against the evidence or the proven statement
+scope \bprov(e|es|ed|en|ing)\b
+scope \bdemonstrat(e|es|ed|ing)\b
+scope \bguarantee(s|d)?\b
+scope \bestablish(es|ed|ing)?\b
+scope \bconfirm(s|ed|ing)?\b
+scope \bsignificant(ly)?\b
+scope \boptimal(ly|ity)?\b
+scope \brobust(ly|ness)?\b
+scope \balways\b
+scope \bnever\b
+scope \bconsistently\b
+scope \buniversal(ly)?\b
+scope \boutperform(s|ed|ing)?\b
+scope \bsuperior(ity)?\b
+scope \beffective(ly|ness)?\b
+scope \bstate[- ]of[- ]the[- ]art\b
+
+@contrast remove invented contrasts (SKILL.md Rule 4.1); keep when the rejected position is named or cited
+contrast \b(is|are|was|were) not (about |just )?[^.;:!?]{1,50}?[;,] (it|they|this) (is|are|was|were|lies|lie|comes|come|rests|rest)\b
+contrast \bthe (real|key|true|main|core|actual) (question|problem|issue|challenge|barrier|difficulty|difference|point) (is|was|lies) not\b
+contrast \bwhat (really )?matters (is|was) not\b
+contrast \bit'?s not (about )?[^.;:!?]{1,40}?[,;] it'?s\b
+contrast \b(the answer|the reality|the truth) is (quite |exactly )?the opposite\b
+
+@cue_colon remove cue phrase plus colon (SKILL.md Rule 4.2)
+cue_colon \b(the|our|my|one) (key|main|core|central|short|simple|big|real) (insight|answer|point|takeaway|idea|lesson|message|finding)( here)?( is| was)?( simple| clear)?\s*:
+cue_colon \bthe (result|answer|reason|catch|bottom line|upshot|takeaway|verdict|short version|conclusion)\s*:
+cue_colon \bin (short|summary|a nutshell|other words|one sentence)\s*:
+cue_colon \b(simply put|put simply|to put it simply)\s*:
+cue_colon \b(here is|here's|here are) (why|how|what|the (main|key|three|two|four))\b
+
+@spoken_opener remove spoken openers (SKILL.md Rule 1)
+spoken_opener \b(simply put|put simply|long story short|bottom line|the bottom line is|let'?s be clear|make no mistake)\b
+
+@persona remove persona metaphors (SKILL.md Rule 2)
+persona \b(acts?|serves?|functions?|works?) (as|like) an? (tireless|intelligent|smart|wise|seasoned|virtual|digital|personal|trusted|always-on|knowledgeable|expert)\b
+persona \blike an? (tireless|wise|smart|seasoned|trusted|knowledgeable|patient|experienced) (mentor|assistant|guide|expert|reviewer|partner|colleague|advisor|teacher|secretary|butler|intern|detective)\b
+
+@restate verify restatement sentences (SKILL.md Rule 4.4); keep only when they add a conclusion
+restate \b(this|that) (means|implies|tells us) that\b
+restate \bin other words\b
+
+@meta remove meta-narrative, previews, and recaps (SKILL.md Rule 4.9); the conclusion section keeps its summary
+meta \bin this (section|subsection|chapter|part|paper|article|work),? (we|I) (will |shall |now |first |briefly )*(discuss|present|describe|introduce|review|outline|explain|turn to|provide|consider|focus on)\b
+meta \b(the )?(remainder|rest) of (this|the) (paper|article|chapter|thesis|section) (is|are) (organi[sz]ed|structured|arranged)\b
+meta \bwe now (turn|proceed|move) to\b
+meta \bnext,? we (will |shall )?(discuss|present|describe|turn to|introduce|show)\b
+meta \bas (mentioned|discussed|noted|stated|described|shown|explained) (above|earlier|before|previously)\b
+meta \bbefore (proceeding|turning to|moving on)\b
+meta \bto (summari[sz]e|sum up)\b
+meta \bin summary\b
+meta \bthis (section|chapter) (has )?(presented|discussed|described|introduced|shown|reviewed)\b
+
+@defensive remove self-deprecation, defensive phrasing, and stacked hedges (SKILL.md Rule 7)
+defensive \badmittedly\b
+defensive \bwe (humbly|modestly)\b
+defensive \b(simple|naive|naïve|preliminary|modest|humble|small) (attempt|step|effort|contribution|exploration)\b
+defensive \b(only|merely|just) a (first|small|preliminary|modest|tentative) (step|attempt)\b
+defensive \bwe do not (claim|intend|purport|aim) to\b
+defensive \bbeyond the scope of (this|the present|our) (paper|work|study|article)\b
+defensive \b(may|might|could) (potentially|possibly|perhaps|conceivably)\b
+defensive \b(possibly|potentially|perhaps) (may|might|could)\b
+defensive \b(might|may) (possibly )?suggest\b
+defensive \bit (is|must be|should be) (acknowledged|admitted|conceded) that\b
+defensive \bwe (acknowledge|admit|concede) that\b
+defensive \b(despite|although|while) (its|our|their|these|the) (limitations|shortcomings|weaknesses)\b
+defensive \b(has|have) (several|many|some|certain) (limitations|shortcomings|weaknesses)\b
+defensive \bwe hope (that )?(this|our|the)\b
+
+# ---------------------------------------------------------------- Chinese
+
+@zh_boilerplate remove 中文套话与空泛表述
+zh_boilerplate 近年来
+zh_boilerplate 随着.{0,12}的?(快速|迅速|飞速|不断|蓬勃|持续|日益)(发展|进步|普及|兴起)
+zh_boilerplate (受到|引起|得到)了?.{0,8}(越来越多|广泛|日益|高度|极大|普遍)的?(关注|重视)
+zh_boilerplate 具有(重要|十分重要|重大|深远)的?(理论|现实|实践|应用)(意义|价值)
+zh_boilerplate (理论|现实|实践)(意义|价值)和(理论|现实|实践)(意义|价值)
+zh_boilerplate 填补了.{0,8}(空白|不足)
+zh_boilerplate 提供了?(新的|重要的|有益的|有效的|全新的)?(思路|视角|参考|借鉴|启示|理论支撑|决策支持)
+zh_boilerplate 奠定了?.{0,6}基础
+zh_boilerplate 开辟了?.{0,6}(新路径|新方向|新领域)
+zh_boilerplate (全新|崭新)的
+zh_boilerplate 不仅.{0,30}(更|还|而且)
+zh_boilerplate 既.{0,15}又.{0,15}还
+
+@zh_figurative remove 比喻或流行语，改用字面表述
+zh_figurative 赋能
+zh_figurative 抓手
+zh_figurative 底层逻辑
+zh_figurative 顶层设计
+zh_figurative 痛点
+zh_figurative 打通
+zh_figurative 护城河
+zh_figurative 双刃剑
+zh_figurative 组合拳
+zh_figurative 助力
+zh_figurative 打造
+zh_figurative 深耕
+zh_figurative 破局
+zh_figurative 基石
+zh_figurative 蓝图
+zh_figurative 全方位
+zh_figurative 多维度
+zh_figurative 深度融合
+zh_figurative (新|全新)的?(范式|格局|赛道)
+
+@zh_figurative_or_technical verify 一般行文中是比喻，在部分领域是术语；只保留术语用法
+zh_figurative_or_technical 闭环
+zh_figurative_or_technical 链路
+zh_figurative_or_technical 引擎
+zh_figurative_or_technical 生态(圈|系统|体系)?
+zh_figurative_or_technical 桥梁
+zh_figurative_or_technical 电池
+zh_figurative_or_technical 画像
+
+@zh_emphasis remove 空洞强调与连接词堆叠
+zh_emphasis 值得(注意|一提|关注|指出)的是
+zh_emphasis 需要(指出|强调|注意|说明)的是
+zh_emphasis 不难(发现|看出)
+zh_emphasis 显而易见
+zh_emphasis 众所周知
+zh_emphasis 综上所述
+zh_emphasis 总而言之
+zh_emphasis 毋庸置疑
+zh_emphasis 与此同时
+zh_emphasis 此外
+
+@zh_verbose remove 冗余动词结构，改用直接动词
+zh_verbose 进行了?(分析|研究|探讨|讨论|优化|求解|估计|检验|比较|考察|计算|建模|评估|介绍|说明|阐述|改进|验证)
+zh_verbose 加以(分析|研究|说明|解决|讨论|改进|验证)
+zh_verbose 对.{1,15}进行了?
+zh_verbose (做|作)出了?.{0,4}贡献
+
+@zh_scope verify 需要核对证据或命题范围的断言词
+zh_scope 显著地?
+zh_scope 首次
+zh_scope 极大地?
+zh_scope 有效地?解决
+zh_scope 证明了?
+zh_scope 最优
+zh_scope 稳健|鲁棒
+
+@zh_contrast remove 翻案腔（chinese.md 规则 11.1）；被推翻的观点确有出处时保留
+zh_contrast (不是|并非|不在于)[^，。！？；\n]{1,20}[，,]?(而是|而在于)
+zh_contrast 与其说[^。！？\n]{1,20}不如说
+zh_contrast (看似|表面上?)[^。！？\n]{1,20}(实则|实际上|其实)
+zh_contrast 你以为[^。！？\n]{1,30}其实
+zh_contrast 说到底
+zh_contrast 答案恰恰相反
+zh_contrast 回头(才|再)?(发现|看)
+
+@zh_cue_colon remove 提示语加冒号（chinese.md 规则 11.2）
+zh_cue_colon (一句话(总结|说|概括)|简单说|总结|小结|结论|核心(是|在于|观点)?|关键(是|在于)?|重点(是)?|原因(如下|有|在于)?|答案(是)?|本质(是|上)?|换句话说|也就是说|我的(观点|判断|结论))[：:]
+
+@zh_spoken_opener remove 口语起手式（chinese.md 规则 1）
+zh_spoken_opener 说白了|说穿了|先说结论
+
+@zh_persona remove 拟人化喻体（chinese.md 规则 2）
+zh_persona (像|相当于|如同|好比|堪称|宛如)(一位|一个|一名|位|个)[^，。！？\n]{0,10}(导师|秘书|助手|顾问|管家|审查员|实习生|伙伴|向导|老师|专家|大脑|侦探)
+
+@zh_translationese verify 翻译腔（chinese.md 规则 6、11.4）；只处理这几种，表示数学条件的"当……时"保留
+zh_translationese 当[^，。！？\n]{2,20}(?<!的时候)时，
+zh_translationese 对于[^，。！？\n]{2,15}来说|对[^，。！？\n]{2,15}而言|就[^，。！？\n]{2,15}而言
+zh_translationese 在[^，。！？\n]{2,12}方面
+zh_translationese 这意味着|这表明|这说明
+zh_translationese (一个|一种|一套|这种|这个)[^，。、；：！？\n]{15,}的[\u4e00-\u9fff]{2,5}
+
+@zh_meta remove 元叙事、预告与小结（chinese.md 规则 11.8）；全文结论部分保留总结
+zh_meta 本(节|章|部分|小节)(将|主要|首先|拟)?(介绍|讨论|阐述|给出|分析|说明|回顾|概述)
+zh_meta 下面(我们)?(将|来)?(介绍|讨论|分析|说明|给出)
+zh_meta 接下来(我们)?(将|会)?(介绍|讨论|分析|说明|给出)
+zh_meta 如前(所述|文所述)|前文(已经)?(提到|指出|述及|讨论)
+zh_meta (本文|全文)(的)?(结构|章节|内容)?安排如下|其余部分(安排|组织)如下
+zh_meta 本(节|章)小结|小结一下
+
+@zh_defensive remove 自贬、防御与叠用限定（chinese.md 规则 13）
+zh_defensive 本文(只是|仅是|仅仅是|只不过是)
+zh_defensive (初步|粗浅|浅显|肤浅)的?(尝试|探索|思考)|(粗浅|浅显|肤浅)的研究
+zh_defensive 抛砖引玉|笔者水平有限|不足之处|敬请(批评|指正)|难免(存在|有)
+zh_defensive 本文并不(试图|声称|旨在|打算)
+zh_defensive 超出(了)?本文(的)?(研究)?范围
+zh_defensive 在一定程度上可能|或许可能|可能也许|也许可能

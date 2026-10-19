@@ -1,0 +1,7 @@
+interface:
+  display_name: "Academic Humanizer"
+  short_description: "Edit AI-assisted academic prose without changing numbers, equations, citations, or theorem statements"
+  default_prompt: "Polish this manuscript text with the academic-humanizer skill and run the bundled checker."
+
+policy:
+  allow_implicit_invocation: true
