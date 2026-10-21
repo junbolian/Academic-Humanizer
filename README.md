@@ -1,10 +1,21 @@
-# Academic Humanizer
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-en-dark.svg">
+  <img src="docs/assets/banner-en-light.svg" width="100%" alt="Academic Humanizer: remove the AI tone from academic writing and keep every number, equation, and citation. Before: 'It is worth noting that our novel framework may potentially reduce error by 3.1% (Table 4), paving the way for robust decisions.' After: 'Our framework reduces error by 3.1% (Table 4).' The checker confirms that the numbers and table references are unchanged.">
+</picture>
+
+<img src="https://img.shields.io/badge/license-MIT-2E7D4F" alt="License: MIT">
+<img src="https://img.shields.io/badge/version-1.1-2E7D4F" alt="Version 1.1">
+<img src="https://img.shields.io/badge/runs%20in-Claude%20%C2%B7%20Codex%20%C2%B7%20ChatGPT-24292F" alt="Runs in Claude, Codex, and ChatGPT">
+<img src="https://img.shields.io/badge/checker-Python%203%2C%20stdlib%20only-24292F" alt="Checker: Python 3, standard library only">
+<img src="https://img.shields.io/badge/for-papers%20%C2%B7%20theses%20%C2%B7%20rebuttals%20%C2%B7%20grants-24292F" alt="For papers, theses, rebuttals, and grants">
+
+**English** · [简体中文](README.zh-CN.md) · [PDF guide](docs/academic-humanizer-v1.1-en.pdf)
+
+</div>
 
 **Remove the AI tone from academic writing and keep every number, equation, citation, and theorem exactly as you wrote it.**
-
-**English** | [简体中文](README.zh-CN.md)
-
-[PDF guide](docs/academic-humanizer-v1.1-en.pdf) · v1.1 · MIT License
 
 Academic Humanizer is an agent skill for editing and drafting manuscripts, theses, referee responses, and grant proposals in English and Chinese. It runs in Claude, OpenAI Codex, ChatGPT, and any agent that reads `SKILL.md`. A bundled checker verifies every edit, so the science in the text stays the science you wrote.
 
@@ -92,6 +103,7 @@ The three removed qualifiers hedged numbers that the paper reports in its own ta
 academic-humanizer/          the skill: SKILL.md, references/, scripts/, agents/openai.yaml
 platforms/                   instructions for ChatGPT GPTs and projects
 docs/                        English PDF guide
+docs/assets/                 README banners (light and dark, English and Chinese)
 docs/zh-CN/                  Chinese translation of SKILL.md and Chinese PDF guide
 README.zh-CN.md              Chinese README
 ```

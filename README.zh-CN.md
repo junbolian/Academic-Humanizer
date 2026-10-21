@@ -1,10 +1,21 @@
-# Academic Humanizer 学术去 AI 味
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-zh-dark.svg">
+  <img src="docs/assets/banner-zh-light.svg" width="100%" alt="Academic Humanizer：学术写作去 AI 味，数字、公式、引用和定理一字不改。修改前：“值得注意的是，本文提出的全新框架在一定程度上可能将误差降低 3.1%（表 4），为稳健决策提供了有力抓手。”修改后：“本文提出的框架将误差降低 3.1%（表 4）。”核对脚本确认数字和图表引用未变。">
+</picture>
+
+<img src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-MIT-2E7D4F" alt="许可：MIT">
+<img src="https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.1-2E7D4F" alt="版本 1.1">
+<img src="https://img.shields.io/badge/%E8%BF%90%E8%A1%8C%E4%BA%8E-Claude%20%C2%B7%20Codex%20%C2%B7%20ChatGPT-24292F" alt="运行于 Claude、Codex、ChatGPT">
+<img src="https://img.shields.io/badge/%E6%A0%B8%E5%AF%B9%E8%84%9A%E6%9C%AC-Python%203%EF%BC%8C%E4%BB%85%E6%A0%87%E5%87%86%E5%BA%93-24292F" alt="核对脚本：Python 3，仅标准库">
+<img src="https://img.shields.io/badge/%E9%80%82%E7%94%A8-%E8%AE%BA%E6%96%87%20%C2%B7%20%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%20%C2%B7%20%E5%AE%A1%E7%A8%BF%E5%9B%9E%E5%A4%8D%20%C2%B7%20%E5%9F%BA%E9%87%91%E7%94%B3%E8%AF%B7-24292F" alt="适用：论文、学位论文、审稿回复、基金申请">
+
+[English](README.md) · **简体中文** · [中文 PDF 指南](docs/zh-CN/academic-humanizer-v1.1-zh.pdf) · [SKILL.md 中文译本](docs/zh-CN/SKILL.zh-CN.md)
+
+</div>
 
 **去掉学术写作里的 AI 腔，数字、公式、引用和定理一字不改。**
-
-[English](README.md) | **简体中文**
-
-[中文 PDF 指南](docs/zh-CN/academic-humanizer-v1.1-zh.pdf) · [SKILL.md 中文译本](docs/zh-CN/SKILL.zh-CN.md) · v1.1 · MIT 许可
 
 Academic Humanizer 是一个用于编辑和起草学术文本的智能体 skill，处理中英文论文、学位论文、审稿回复和基金申请书。它可以在 Claude、OpenAI Codex、ChatGPT 以及任何读取 `SKILL.md` 的智能体中运行。附带的核对脚本逐项检查每一次修改，保证文中的科学内容仍是作者写下的内容。
 
