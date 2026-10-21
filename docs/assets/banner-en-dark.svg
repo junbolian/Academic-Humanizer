@@ -1,56 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="328" viewBox="0 0 960 328" role="img" aria-label="Academic Humanizer: Edits AI-assisted academic prose until it reads as human scholarship.">
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="442" viewBox="0 0 960 442" role="img" aria-label="Academic Humanizer: Edits AI-assisted academic prose until it reads as human scholarship.">
 <title>Academic Humanizer: Edits AI-assisted academic prose until it reads as human scholarship.</title>
-<rect x="0.5" y="0.5" width="959" height="327" rx="14" fill="#0E1117" stroke="#2A2F3A"/>
-<rect x="48" y="34" width="44" height="44" rx="11" fill="#8B93F8"/>
+<rect x="0.5" y="0.5" width="959" height="441" rx="14" fill="#0E1117" stroke="#2A2F3A"/>
+<rect x="48" y="34" width="44" height="44" rx="11" fill="#5DB3D3"/>
 <text x="70" y="67" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="700" fill="#0E1117" text-anchor="middle">¶</text>
 <text x="108" y="61" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700" fill="#E7E9EE">Academic Humanizer</text>
 <text x="109" y="84" font-family="Georgia, 'Times New Roman', serif" font-size="16" fill="#A4ABBA">Edits AI-assisted academic prose until it reads as human scholarship.</text>
 <text x="912" y="52" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12" fill="#6E7687" text-anchor="end">v1.1 · MIT</text>
-<rect x="48" y="106" width="420" height="166" rx="10" fill="#151922" stroke="#232836"/>
+<rect x="48" y="106" width="420" height="280" rx="10" fill="#151922" stroke="#232836"/>
 <g stroke="#6E7687" stroke-width="1.8" stroke-linecap="round"><line x1="66" y1="125" x2="75" y2="134"/><line x1="75" y1="125" x2="66" y2="134"/></g>
 <text x="83" y="134" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="11.5" font-weight="700" letter-spacing="1.6" fill="#6E7687">REMOVES</text>
-<rect x="492" y="106" width="420" height="166" rx="10" fill="#151922" stroke="#232836"/>
-<g fill="none" stroke="#8B93F8" stroke-width="1.6"><path d="M511.5 127.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="509.5" y="126.5" width="10" height="7.5" rx="1.6" fill="#8B93F8"/>
-<text x="527" y="134" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="11.5" font-weight="700" letter-spacing="1.6" fill="#8B93F8">KEEPS · VERIFIED</text>
-<rect x="66.0" y="148" width="58.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
-<text x="78.0" y="168" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">delve</text>
-<rect x="132.0" y="148" width="162.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
-<text x="144.0" y="168" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">It is worth noting that</text>
-<rect x="302.0" y="148" width="124.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
-<text x="314.0" y="168" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">may potentially</text>
-<rect x="66.0" y="186" width="115.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
-<text x="78.0" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">paves the way</text>
-<rect x="189.0" y="186" width="98.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
-<text x="201.0" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">not X, but Y</text>
-<rect x="295.0" y="186" width="136.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
-<text x="307.0" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">In this section, we</text>
-<rect x="66.0" y="224" width="133.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
-<text x="78.0" y="244" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">novel framework</text>
-<rect x="207.0" y="224" width="156.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
-<text x="219.0" y="244" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">certification protocol</text>
-<rect x="371.0" y="224" width="36.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
-<text x="383.0" y="244" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">—</text>
-<rect x="510.0" y="148" width="68.0" height="30" rx="6" fill="#1C1F3A" stroke="#4A50B8"/>
-<g fill="none" stroke="#8B93F8" stroke-width="1.6"><path d="M523.0 161.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="160.5" width="10" height="7.5" rx="1.6" fill="#8B93F8"/>
-<text x="538.0" y="168" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C7CBFF">3.1%</text>
-<rect x="586.0" y="148" width="89.0" height="30" rx="6" fill="#1C1F3A" stroke="#4A50B8"/>
-<g fill="none" stroke="#8B93F8" stroke-width="1.6"><path d="M599.0 161.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="597.0" y="160.5" width="10" height="7.5" rx="1.6" fill="#8B93F8"/>
-<text x="614.0" y="168" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C7CBFF">Eq. (4)</text>
-<rect x="683.0" y="148" width="124.0" height="30" rx="6" fill="#1C1F3A" stroke="#4A50B8"/>
-<g fill="none" stroke="#8B93F8" stroke-width="1.6"><path d="M696.0 161.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="694.0" y="160.5" width="10" height="7.5" rx="1.6" fill="#8B93F8"/>
-<text x="711.0" y="168" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C7CBFF">\citet{ref1}</text>
-<rect x="510.0" y="186" width="103.0" height="30" rx="6" fill="#1C1F3A" stroke="#4A50B8"/>
-<g fill="none" stroke="#8B93F8" stroke-width="1.6"><path d="M523.0 199.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="198.5" width="10" height="7.5" rx="1.6" fill="#8B93F8"/>
-<text x="538.0" y="206" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C7CBFF">Theorem 2</text>
-<rect x="621.0" y="186" width="89.0" height="30" rx="6" fill="#1C1F3A" stroke="#4A50B8"/>
-<g fill="none" stroke="#8B93F8" stroke-width="1.6"><path d="M634.0 199.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="632.0" y="198.5" width="10" height="7.5" rx="1.6" fill="#8B93F8"/>
-<text x="649.0" y="206" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C7CBFF">Table 4</text>
-<rect x="718.0" y="186" width="159.0" height="30" rx="6" fill="#1C1F3A" stroke="#4A50B8"/>
-<g fill="none" stroke="#8B93F8" stroke-width="1.6"><path d="M731.0 199.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="729.0" y="198.5" width="10" height="7.5" rx="1.6" fill="#8B93F8"/>
-<text x="746.0" y="206" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C7CBFF">\label{sec:model}</text>
-<rect x="510.0" y="224" width="160.0" height="30" rx="6" fill="#1C1F3A" stroke="#4A50B8"/>
-<g fill="none" stroke="#8B93F8" stroke-width="1.6"><path d="M523.0 237.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="236.5" width="10" height="7.5" rx="1.6" fill="#8B93F8"/>
-<text x="538.0" y="244" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#C7CBFF">may (real doubt)</text>
-<text x="50" y="302" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12.5" fill="#A4ABBA">check_revision.py compares every number, citation, label, equation, and theorem</text>
-<text x="912" y="302" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12.5" fill="#6E7687" text-anchor="end">Claude · Codex · ChatGPT</text>
+<rect x="492" y="106" width="420" height="280" rx="10" fill="#151922" stroke="#232836"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M511.5 127.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="509.5" y="126.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="527" y="134" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="11.5" font-weight="700" letter-spacing="1.6" fill="#5DB3D3">KEEPS · VERIFIED</text>
+<rect x="66.0" y="148" width="353.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="78.0" y="168" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">In recent years, X has attracted increasing attention.</text>
+<rect x="66.0" y="186" width="254.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="78.0" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">The real barrier is not data but trust.</text>
+<rect x="66.0" y="224" width="194.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="78.0" y="244" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">only a preliminary attempt</text>
+<rect x="268.0" y="224" width="162.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="280.0" y="244" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">It is worth noting that</text>
+<rect x="66.0" y="262" width="156.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="78.0" y="282" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">certification protocol</text>
+<rect x="230.0" y="262" width="136.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="242.0" y="282" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">In this section, we</text>
+<rect x="66.0" y="300" width="133.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="78.0" y="320" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">novel framework</text>
+<rect x="207.0" y="300" width="124.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="219.0" y="320" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">may potentially</text>
+<rect x="66.0" y="338" width="124.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="78.0" y="358" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">This means that</text>
+<rect x="328.0" y="186" width="115.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="340.0" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">paves the way</text>
+<rect x="339.0" y="300" width="110.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="351.0" y="320" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">sheds light on</text>
+<rect x="374.0" y="262" width="69.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="386.0" y="282" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">pivotal</text>
+<rect x="198.0" y="338" width="58.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="210.0" y="358" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">delve</text>
+<rect x="264.0" y="338" width="36.0" height="30" rx="15" fill="#11151D" stroke="#2E3442" stroke-dasharray="3 3"/>
+<text x="276.0" y="358" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-style="italic" fill="#8A91A0" style="text-decoration:line-through;text-decoration-color:#5E6575">—</text>
+<rect x="510.0" y="148" width="332.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M523.0 161.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="160.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="538.0" y="168" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="400" fill="#C3E4F1">Under Assumption 1, the estimator is unbiased.</text>
+<rect x="510.0" y="186" width="240.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M523.0 199.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="198.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="538.0" y="206" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#C3E4F1">suggests (indirect evidence)</text>
+<rect x="510.0" y="224" width="159.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M523.0 237.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="236.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="538.0" y="244" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C3E4F1">\label{sec:model}</text>
+<rect x="677.0" y="224" width="160.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M690.0 237.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="688.0" y="236.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="705.0" y="244" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#C3E4F1">may (real doubt)</text>
+<rect x="510.0" y="262" width="138.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M523.0 275.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="274.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="538.0" y="282" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#C3E4F1">Assumption 1</text>
+<rect x="758.0" y="186" width="124.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M771.0 199.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="769.0" y="198.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="786.0" y="206" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C3E4F1">\citet{ref1}</text>
+<rect x="656.0" y="262" width="119.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M669.0 275.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="667.0" y="274.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="684.0" y="282" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#C3E4F1">Theorem 2</text>
+<rect x="783.0" y="262" width="96.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M796.0 275.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="794.0" y="274.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="811.0" y="282" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C3E4F1">p &lt; 0.05</text>
+<rect x="510.0" y="300" width="89.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M523.0 313.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="312.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="538.0" y="320" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C3E4F1">n = 500</text>
+<rect x="607.0" y="300" width="93.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M620.0 313.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="618.0" y="312.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="635.0" y="320" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#C3E4F1">Table 4</text>
+<rect x="708.0" y="300" width="89.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M721.0 313.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="719.0" y="312.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="736.0" y="320" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#C3E4F1">Eq. (4)</text>
+<rect x="805.0" y="300" width="80.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M818.0 313.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="816.0" y="312.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="833.0" y="320" font-family="Georgia, 'Times New Roman', serif" font-size="14" font-weight="700" fill="#C3E4F1">Fig. 2</text>
+<rect x="510.0" y="338" width="68.0" height="30" rx="6" fill="#10252E" stroke="#2D6176"/>
+<g fill="none" stroke="#5DB3D3" stroke-width="1.6"><path d="M523.0 351.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="350.5" width="10" height="7.5" rx="1.6" fill="#5DB3D3"/>
+<text x="538.0" y="358" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#C3E4F1">3.1%</text>
+<text x="50" y="416" font-family="Georgia, 'Times New Roman', serif" font-size="15" font-style="italic" fill="#A4ABBA">Every edit is checked against your original, so the science stays yours.</text>
+<text x="912" y="416" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12.5" fill="#6E7687" text-anchor="end">Claude · Codex · ChatGPT</text>
 </svg>

@@ -2,14 +2,14 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-en-dark.svg">
-  <img src="docs/assets/banner-en-light.svg" width="100%" alt="Academic Humanizer edits AI-assisted academic prose until it reads as human scholarship. Removes: delve, 'It is worth noting that', 'may potentially', 'paves the way', 'not X, but Y', 'In this section, we', 'novel framework', 'certification protocol', dashes. Keeps and verifies: numbers such as 3.1%, Eq. (4), citation keys, Theorem 2, Table 4, labels, and genuine qualifiers. check_revision.py compares every number, citation, label, equation, and theorem.">
+  <img src="docs/assets/banner-en-light.svg" width="100%" alt="Academic Humanizer edits AI-assisted academic prose until it reads as human scholarship. Removes: 'In recent years, X has attracted increasing attention.', 'The real barrier is not data but trust.', delve, pivotal, 'It is worth noting that', 'may potentially', 'sheds light on', 'paves the way', 'In this section, we', 'This means that', 'novel framework', 'only a preliminary attempt', 'certification protocol', dashes. Keeps and verifies: 3.1%, n = 500, p &lt; 0.05, Eq. (4), Table 4, Fig. 2, citation keys, Theorem 2, Assumption 1, labels, the theorem statement 'Under Assumption 1, the estimator is unbiased.', and genuine qualifiers such as may and suggests. Every edit is checked against your original, so the science stays yours.">
 </picture>
 
-<img src="https://img.shields.io/badge/license-MIT-4338CA" alt="License: MIT">
-<img src="https://img.shields.io/badge/version-1.1-4338CA" alt="Version 1.1">
-<img src="https://img.shields.io/badge/runs%20in-Claude%20%C2%B7%20Codex%20%C2%B7%20ChatGPT-4338CA" alt="Runs in Claude, Codex, and ChatGPT">
-<img src="https://img.shields.io/badge/checker-Python%203%2C%20stdlib%20only-4338CA" alt="Checker: Python 3, standard library only">
-<img src="https://img.shields.io/badge/for-papers%20%C2%B7%20theses%20%C2%B7%20rebuttals%20%C2%B7%20grants-4338CA" alt="For papers, theses, rebuttals, and grants">
+<img src="https://img.shields.io/badge/license-MIT-0F5C7A" alt="License: MIT">
+<img src="https://img.shields.io/badge/version-1.1-0F5C7A" alt="Version 1.1">
+<img src="https://img.shields.io/badge/runs%20in-Claude%20%C2%B7%20Codex%20%C2%B7%20ChatGPT-0F5C7A" alt="Runs in Claude, Codex, and ChatGPT">
+<img src="https://img.shields.io/badge/checker-Python%203%2C%20stdlib%20only-0F5C7A" alt="Checker: Python 3, standard library only">
+<img src="https://img.shields.io/badge/for-papers%20%C2%B7%20theses%20%C2%B7%20rebuttals%20%C2%B7%20grants-0F5C7A" alt="For papers, theses, rebuttals, and grants">
 
 **English** · [简体中文](README.zh-CN.md) · [PDF guide](docs/academic-humanizer-v1.1-en.pdf)
 

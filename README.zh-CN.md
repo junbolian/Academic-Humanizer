@@ -2,14 +2,14 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-zh-dark.svg">
-  <img src="docs/assets/banner-zh-light.svg" width="100%" alt="Academic Humanizer 润色 AI 辅助的学术文字，让它读起来像学者亲手所写。删去：值得注意的是、近年来、不是……而是、在一定程度上可能、赋能、本节将介绍、全新框架、认证协议、破折号。保留并逐项核对：3.1% 等数字、式 (4)、引用键、定理 2、表 4、标签和真实的限定词。check_revision.py 逐项比对数字、引用、标签、公式和定理。">
+  <img src="docs/assets/banner-zh-light.svg" width="100%" alt="Academic Humanizer 润色 AI 辅助的学术文字，让它读起来像学者亲手所写。删去：“近年来，X 受到了学术界和业界的广泛关注。”“难点不是数据，而是信任。”值得注意的是、赋能、抓手、在一定程度上可能、这意味着、具有重要的理论意义和现实意义、本节将介绍、一句话总结、全新框架、认证协议、抛砖引玉、破折号。保留并逐项核对：3.1%、n = 500、p &lt; 0.05、式 (4)、表 4、图 2、引用键、定理 2、假设 1、标签、定理原文“在假设 1 下，该估计量无偏。”，以及“可能”“提示”等真实的限定词。每处修改都与原稿逐项比对，论文里的科学内容始终是你写下的。">
 </picture>
 
-<img src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-MIT-4338CA" alt="许可：MIT">
-<img src="https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.1-4338CA" alt="版本 1.1">
-<img src="https://img.shields.io/badge/%E8%BF%90%E8%A1%8C%E4%BA%8E-Claude%20%C2%B7%20Codex%20%C2%B7%20ChatGPT-4338CA" alt="运行于 Claude、Codex、ChatGPT">
-<img src="https://img.shields.io/badge/%E6%A0%B8%E5%AF%B9%E8%84%9A%E6%9C%AC-Python%203%EF%BC%8C%E4%BB%85%E6%A0%87%E5%87%86%E5%BA%93-4338CA" alt="核对脚本：Python 3，仅标准库">
-<img src="https://img.shields.io/badge/%E9%80%82%E7%94%A8-%E8%AE%BA%E6%96%87%20%C2%B7%20%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%20%C2%B7%20%E5%AE%A1%E7%A8%BF%E5%9B%9E%E5%A4%8D%20%C2%B7%20%E5%9F%BA%E9%87%91%E7%94%B3%E8%AF%B7-4338CA" alt="适用：论文、学位论文、审稿回复、基金申请">
+<img src="https://img.shields.io/badge/%E8%AE%B8%E5%8F%AF-MIT-0F5C7A" alt="许可：MIT">
+<img src="https://img.shields.io/badge/%E7%89%88%E6%9C%AC-1.1-0F5C7A" alt="版本 1.1">
+<img src="https://img.shields.io/badge/%E8%BF%90%E8%A1%8C%E4%BA%8E-Claude%20%C2%B7%20Codex%20%C2%B7%20ChatGPT-0F5C7A" alt="运行于 Claude、Codex、ChatGPT">
+<img src="https://img.shields.io/badge/%E6%A0%B8%E5%AF%B9%E8%84%9A%E6%9C%AC-Python%203%EF%BC%8C%E4%BB%85%E6%A0%87%E5%87%86%E5%BA%93-0F5C7A" alt="核对脚本：Python 3，仅标准库">
+<img src="https://img.shields.io/badge/%E9%80%82%E7%94%A8-%E8%AE%BA%E6%96%87%20%C2%B7%20%E5%AD%A6%E4%BD%8D%E8%AE%BA%E6%96%87%20%C2%B7%20%E5%AE%A1%E7%A8%BF%E5%9B%9E%E5%A4%8D%20%C2%B7%20%E5%9F%BA%E9%87%91%E7%94%B3%E8%AF%B7-0F5C7A" alt="适用：论文、学位论文、审稿回复、基金申请">
 
 [English](README.md) · **简体中文** · [中文 PDF 指南](docs/zh-CN/academic-humanizer-v1.1-zh.pdf) · [SKILL.md 中文译本](docs/zh-CN/SKILL.zh-CN.md)
 
