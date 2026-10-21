@@ -1,32 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="372" viewBox="0 0 960 372" role="img" aria-label="Academic Humanizer: 润色 AI 辅助的学术文字，数字、公式和引用一字不动。">
-<title>Academic Humanizer: 润色 AI 辅助的学术文字，数字、公式和引用一字不动。</title>
-<rect x="0.5" y="0.5" width="959" height="371" rx="12" fill="#FFFFFF" stroke="#D5DBE3"/>
-<path d="M12.5 0.5 H947 A12 12 0 0 1 959 6 H0.9 A12 12 0 0 1 12.5 0.5 Z" fill="#13233A"/>
-<rect x="56" y="36" width="46" height="46" rx="9" fill="#13233A"/>
-<text x="79" y="71" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#E9C46A" text-anchor="middle">¶</text>
-<text x="118" y="64" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" fill="#13233A">Academic Humanizer</text>
-<text x="119" y="88" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="16" fill="#55627A">润色 AI 辅助的学术文字，数字、公式和引用一字不动。</text>
-<text x="904" y="56" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12" fill="#8A95A8" text-anchor="end">v1.1 · MIT</text>
-<line x1="56" y1="112" x2="904" y2="112" stroke="#E3E8EF"/>
-<text x="56" y="142" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="11" letter-spacing="1.5" fill="#8A95A8">修订稿 · MARKED-UP DRAFT</text>
-<text x="650" y="142" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="11" letter-spacing="1.5" fill="#8A95A8">编辑批注</text>
-<line x1="630" y1="128" x2="630" y2="276" stroke="#E3E8EF"/>
-<text x="56" y="176" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="17" xml:space="preserve"><tspan fill="#C2412D" style="text-decoration:line-through;text-decoration-color:#C2412D">值得注意的是，</tspan><tspan dy="-7" font-size="11" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#C2412D">1</tspan><tspan dy="7" fill="#13233A">本文提出的</tspan><tspan fill="#C2412D" style="text-decoration:line-through;text-decoration-color:#C2412D">全新</tspan><tspan dy="-7" font-size="11" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#C2412D">2</tspan><tspan dy="7" fill="#13233A">框架</tspan><tspan fill="#C2412D" style="text-decoration:line-through;text-decoration-color:#C2412D">在一定程度上可能</tspan><tspan dy="-7" font-size="11" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#C2412D">3</tspan><tspan dy="7" fill="#13233A">将误差降低</tspan></text>
-<text x="56" y="207" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="17" xml:space="preserve"><tspan fill="#8A6100" font-weight="700" style="text-decoration:underline;text-decoration-color:#D4A72C;text-decoration-thickness:2px;text-underline-offset:3px">3.1%（表 4）</tspan><tspan fill="#C2412D" style="text-decoration:line-through;text-decoration-color:#C2412D">，为稳健决策提供了有力抓手</tspan><tspan dy="-7" font-size="11" font-family="Georgia, 'Times New Roman', serif" font-weight="700" fill="#C2412D">4</tspan><tspan dy="7" fill="#13233A">。</tspan></text>
-<text x="56" y="246" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="11" letter-spacing="1.5" fill="#8A95A8">定稿</text>
-<text x="56" y="272" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="17" xml:space="preserve"><tspan fill="#13233A">本文提出的框架将误差降低 </tspan><tspan fill="#8A6100" font-weight="700" style="text-decoration:underline;text-decoration-color:#D4A72C;text-decoration-thickness:2px;text-underline-offset:3px">3.1%（表 4）</tspan><tspan fill="#13233A">。</tspan></text>
-<text x="650" y="174" font-family="Georgia, 'Times New Roman', serif" font-size="11" font-weight="700" fill="#C2412D">1</text>
-<text x="666" y="174" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="13" fill="#55627A">规则 1 · 空洞强调</text>
-<text x="650" y="200" font-family="Georgia, 'Times New Roman', serif" font-size="11" font-weight="700" fill="#C2412D">2</text>
-<text x="666" y="200" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="13" fill="#55627A">规则 1 · 新颖性堆砌</text>
-<text x="650" y="226" font-family="Georgia, 'Times New Roman', serif" font-size="11" font-weight="700" fill="#C2412D">3</text>
-<text x="666" y="226" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="13" fill="#55627A">规则 7 · 已报告结果上的叠用限定</text>
-<text x="650" y="252" font-family="Georgia, 'Times New Roman', serif" font-size="11" font-weight="700" fill="#C2412D">4</text>
-<text x="666" y="252" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="13" fill="#55627A">规则 2 · 流行语与空泛评价</text>
-<rect x="56" y="300" width="848" height="40" rx="6" fill="#F2F5F9"/>
-<text x="72" y="325" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12.5" fill="#8A95A8">check_revision.py compare</text>
-<text x="277" y="325" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12.5" fill="#13233A">数字 3.1% ✓</text>
-<text x="382" y="325" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12.5" fill="#13233A">引用 表 4 ✓</text>
-<text x="486" y="325" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12.5" fill="#13233A">限定词 −2，已报告</text>
-<text x="888" y="325" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12.5" font-weight="700" fill="#0B7A75" text-anchor="end">不变量全部保持 · exit 0</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="328" viewBox="0 0 960 328" role="img" aria-label="Academic Humanizer: 润色 AI 辅助的学术文字，让它读起来像学者亲手所写。">
+<title>Academic Humanizer: 润色 AI 辅助的学术文字，让它读起来像学者亲手所写。</title>
+<rect x="0.5" y="0.5" width="959" height="327" rx="14" fill="#FFFFFF" stroke="#D9DCE3"/>
+<rect x="48" y="34" width="44" height="44" rx="11" fill="#4338CA"/>
+<text x="70" y="67" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="700" fill="#FFFFFF" text-anchor="middle">¶</text>
+<text x="108" y="61" font-family="Georgia, 'Times New Roman', serif" font-size="31" font-weight="700" fill="#141824">Academic Humanizer</text>
+<text x="109" y="84" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="16" fill="#525A6B">润色 AI 辅助的学术文字，让它读起来像学者亲手所写。</text>
+<text x="912" y="52" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12" fill="#8C93A3" text-anchor="end">v1.1 · MIT</text>
+<rect x="48" y="106" width="420" height="166" rx="10" fill="#F7F8FA" stroke="#E6E8EE"/>
+<g stroke="#8C93A3" stroke-width="1.8" stroke-linecap="round"><line x1="66" y1="125" x2="75" y2="134"/><line x1="75" y1="125" x2="66" y2="134"/></g>
+<text x="83" y="134" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="11.5" font-weight="700" letter-spacing="1.6" fill="#8C93A3">删去</text>
+<rect x="492" y="106" width="420" height="166" rx="10" fill="#F7F8FA" stroke="#E6E8EE"/>
+<g fill="none" stroke="#4338CA" stroke-width="1.6"><path d="M511.5 127.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="509.5" y="126.5" width="10" height="7.5" rx="1.6" fill="#4338CA"/>
+<text x="527" y="134" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="11.5" font-weight="700" letter-spacing="1.6" fill="#4338CA">保留 · 逐项核对</text>
+<rect x="66.0" y="148" width="108.0" height="30" rx="15" fill="#FFFFFF" stroke="#D3D7DF" stroke-dasharray="3 3"/>
+<text x="78.0" y="168" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" fill="#7E8594" style="text-decoration:line-through;text-decoration-color:#A9AEBA">值得注意的是</text>
+<rect x="182.0" y="148" width="66.0" height="30" rx="15" fill="#FFFFFF" stroke="#D3D7DF" stroke-dasharray="3 3"/>
+<text x="194.0" y="168" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" fill="#7E8594" style="text-decoration:line-through;text-decoration-color:#A9AEBA">近年来</text>
+<rect x="256.0" y="148" width="110.0" height="30" rx="15" fill="#FFFFFF" stroke="#D3D7DF" stroke-dasharray="3 3"/>
+<text x="268.0" y="168" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" fill="#7E8594" style="text-decoration:line-through;text-decoration-color:#A9AEBA">不是……而是</text>
+<rect x="66.0" y="186" width="136.0" height="30" rx="15" fill="#FFFFFF" stroke="#D3D7DF" stroke-dasharray="3 3"/>
+<text x="78.0" y="206" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" fill="#7E8594" style="text-decoration:line-through;text-decoration-color:#A9AEBA">在一定程度上可能</text>
+<rect x="210.0" y="186" width="52.0" height="30" rx="15" fill="#FFFFFF" stroke="#D3D7DF" stroke-dasharray="3 3"/>
+<text x="222.0" y="206" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" fill="#7E8594" style="text-decoration:line-through;text-decoration-color:#A9AEBA">赋能</text>
+<rect x="270.0" y="186" width="94.0" height="30" rx="15" fill="#FFFFFF" stroke="#D3D7DF" stroke-dasharray="3 3"/>
+<text x="282.0" y="206" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" fill="#7E8594" style="text-decoration:line-through;text-decoration-color:#A9AEBA">本节将介绍</text>
+<rect x="66.0" y="224" width="80.0" height="30" rx="15" fill="#FFFFFF" stroke="#D3D7DF" stroke-dasharray="3 3"/>
+<text x="78.0" y="244" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" fill="#7E8594" style="text-decoration:line-through;text-decoration-color:#A9AEBA">全新框架</text>
+<rect x="154.0" y="224" width="80.0" height="30" rx="15" fill="#FFFFFF" stroke="#D3D7DF" stroke-dasharray="3 3"/>
+<text x="166.0" y="244" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" fill="#7E8594" style="text-decoration:line-through;text-decoration-color:#A9AEBA">认证协议</text>
+<rect x="242.0" y="224" width="48.0" height="30" rx="15" fill="#FFFFFF" stroke="#D3D7DF" stroke-dasharray="3 3"/>
+<text x="254.0" y="244" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" fill="#7E8594" style="text-decoration:line-through;text-decoration-color:#A9AEBA">——</text>
+<rect x="510.0" y="148" width="68.0" height="30" rx="6" fill="#EEF0FD" stroke="#A5A8F0"/>
+<g fill="none" stroke="#4338CA" stroke-width="1.6"><path d="M523.0 161.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="160.5" width="10" height="7.5" rx="1.6" fill="#4338CA"/>
+<text x="538.0" y="168" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#2E2A8F">3.1%</text>
+<rect x="586.0" y="148" width="76.0" height="30" rx="6" fill="#EEF0FD" stroke="#A5A8F0"/>
+<g fill="none" stroke="#4338CA" stroke-width="1.6"><path d="M599.0 161.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="597.0" y="160.5" width="10" height="7.5" rx="1.6" fill="#4338CA"/>
+<text x="614.0" y="168" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" font-weight="700" fill="#2E2A8F">式 (4)</text>
+<rect x="670.0" y="148" width="124.0" height="30" rx="6" fill="#EEF0FD" stroke="#A5A8F0"/>
+<g fill="none" stroke="#4338CA" stroke-width="1.6"><path d="M683.0 161.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="681.0" y="160.5" width="10" height="7.5" rx="1.6" fill="#4338CA"/>
+<text x="698.0" y="168" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#2E2A8F">\citet{ref1}</text>
+<rect x="802.0" y="148" width="79.0" height="30" rx="6" fill="#EEF0FD" stroke="#A5A8F0"/>
+<g fill="none" stroke="#4338CA" stroke-width="1.6"><path d="M815.0 161.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="813.0" y="160.5" width="10" height="7.5" rx="1.6" fill="#4338CA"/>
+<text x="830.0" y="168" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" font-weight="700" fill="#2E2A8F">定理 2</text>
+<rect x="510.0" y="186" width="66.0" height="30" rx="6" fill="#EEF0FD" stroke="#A5A8F0"/>
+<g fill="none" stroke="#4338CA" stroke-width="1.6"><path d="M523.0 199.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="198.5" width="10" height="7.5" rx="1.6" fill="#4338CA"/>
+<text x="538.0" y="206" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" font-weight="700" fill="#2E2A8F">表 4</text>
+<rect x="584.0" y="186" width="159.0" height="30" rx="6" fill="#EEF0FD" stroke="#A5A8F0"/>
+<g fill="none" stroke="#4338CA" stroke-width="1.6"><path d="M597.0 199.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="595.0" y="198.5" width="10" height="7.5" rx="1.6" fill="#4338CA"/>
+<text x="612.0" y="206" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="13" font-weight="700" fill="#2E2A8F">\label{sec:model}</text>
+<rect x="510.0" y="224" width="180.0" height="30" rx="6" fill="#EEF0FD" stroke="#A5A8F0"/>
+<g fill="none" stroke="#4338CA" stroke-width="1.6"><path d="M523.0 237.0 v-3 a3 3 0 0 1 6 0 v3"/></g><rect x="521.0" y="236.5" width="10" height="7.5" rx="1.6" fill="#4338CA"/>
+<text x="538.0" y="244" font-family="'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', SimSun, serif" font-size="14" font-weight="700" fill="#2E2A8F">可能（真实的不确定）</text>
+<text x="50" y="302" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12.5" fill="#525A6B">check_revision.py 逐项比对数字、引用、标签、公式和定理</text>
+<text x="912" y="302" font-family="Consolas, 'SFMono-Regular', Menlo, 'DejaVu Sans Mono', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', monospace" font-size="12.5" fill="#8C93A3" text-anchor="end">Claude · Codex · ChatGPT</text>
 </svg>

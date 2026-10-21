@@ -2,14 +2,14 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-en-dark.svg">
-  <img src="docs/assets/banner-en-light.svg" width="100%" alt="Academic Humanizer: remove the AI tone from academic writing and keep every number, equation, and citation. Before: 'It is worth noting that our novel framework may potentially reduce error by 3.1% (Table 4), paving the way for robust decisions.' After: 'Our framework reduces error by 3.1% (Table 4).' The checker confirms that the numbers and table references are unchanged.">
+  <img src="docs/assets/banner-en-light.svg" width="100%" alt="Academic Humanizer edits AI-assisted academic prose until it reads as human scholarship. Removes: delve, 'It is worth noting that', 'may potentially', 'paves the way', 'not X, but Y', 'In this section, we', 'novel framework', 'certification protocol', dashes. Keeps and verifies: numbers such as 3.1%, Eq. (4), citation keys, Theorem 2, Table 4, labels, and genuine qualifiers. check_revision.py compares every number, citation, label, equation, and theorem.">
 </picture>
 
-<img src="https://img.shields.io/badge/license-MIT-13233A" alt="License: MIT">
-<img src="https://img.shields.io/badge/version-1.1-13233A" alt="Version 1.1">
-<img src="https://img.shields.io/badge/runs%20in-Claude%20%C2%B7%20Codex%20%C2%B7%20ChatGPT-13233A" alt="Runs in Claude, Codex, and ChatGPT">
-<img src="https://img.shields.io/badge/checker-Python%203%2C%20stdlib%20only-13233A" alt="Checker: Python 3, standard library only">
-<img src="https://img.shields.io/badge/for-papers%20%C2%B7%20theses%20%C2%B7%20rebuttals%20%C2%B7%20grants-13233A" alt="For papers, theses, rebuttals, and grants">
+<img src="https://img.shields.io/badge/license-MIT-4338CA" alt="License: MIT">
+<img src="https://img.shields.io/badge/version-1.1-4338CA" alt="Version 1.1">
+<img src="https://img.shields.io/badge/runs%20in-Claude%20%C2%B7%20Codex%20%C2%B7%20ChatGPT-4338CA" alt="Runs in Claude, Codex, and ChatGPT">
+<img src="https://img.shields.io/badge/checker-Python%203%2C%20stdlib%20only-4338CA" alt="Checker: Python 3, standard library only">
+<img src="https://img.shields.io/badge/for-papers%20%C2%B7%20theses%20%C2%B7%20rebuttals%20%C2%B7%20grants-4338CA" alt="For papers, theses, rebuttals, and grants">
 
 **English** · [简体中文](README.zh-CN.md) · [PDF guide](docs/academic-humanizer-v1.1-en.pdf)
 
