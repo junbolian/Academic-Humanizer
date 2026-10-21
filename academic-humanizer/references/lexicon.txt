@@ -249,6 +249,25 @@ defensive \b(despite|although|while) (its|our|their|these|the) (limitations|shor
 defensive \b(has|have) (several|many|some|certain) (limitations|shortcomings|weaknesses)\b
 defensive \bwe hope (that )?(this|our|the)\b
 
+@worklog verify work-log framing and engineering detail in methods and proofs (SKILL.md Rule 11); keep values a reported result depends on
+worklog \bsanity[- ]checks?\b
+worklog \b(verification|validation|certification|audit|evaluation|computational|numerical) (protocol|pipeline|workflow|layer|stage)s?\b
+worklog \baudit(s|ed|ing)?\b
+worklog \bcertified (upper |lower )?(bounds?|guarantees?|results?|solutions?|optim(a|um)|values?)\b
+worklog \bguardrails?\b
+worklog \b(safeguards?|fallbacks?|retries)\b
+worklog \bnever (triggered|fired|activated|invoked|needed)\b
+worklog \b(did|was|were) not (trigger|triggered|fire|activated|invoked)\b
+worklog \b(random )?seeds?\b
+worklog \b(solver|numerical|convergence|optimality|feasibility|absolute|relative) tolerances?\b
+worklog \b(iteration (cap|limit)|time limit|max(imum)? iterations)\b
+worklog \bresiduals? (norm )?(is|was|were|are|below|under|less than|did not exceed|of order)\b
+worklog \b(jitter|nugget|regulari[sz]ation (term|constant|value)) (of|equal to|set to)\b
+worklog \b(verified|checked|confirmed) numerically\b
+worklog \bnumerically (verified|checked|confirmed)\b
+worklog \b(we|i) (ran|re-?ran|executed|launched|debugged)\b
+worklog (?<![\w\\])[A-Za-z_][\w\\-]+\.(py|ipynb|jl|sh|cpp|json|ya?ml|csv|mat|rmd)\b
+
 # ---------------------------------------------------------------- Chinese
 
 @zh_boilerplate remove 中文套话与空泛表述
@@ -362,3 +381,83 @@ zh_defensive 抛砖引玉|笔者水平有限|不足之处|敬请(批评|指正)|
 zh_defensive 本文并不(试图|声称|旨在|打算)
 zh_defensive 超出(了)?本文(的)?(研究)?范围
 zh_defensive 在一定程度上可能|或许可能|可能也许|也许可能
+
+@zh_worklog verify 方法与证明里的工作日志式写法和工程细节（chinese.md 规则 14）；报告结果所依赖的取值保留
+zh_worklog (健全性|合理性|完整性)(检查|校验)
+zh_worklog 流水线|管线
+zh_worklog 审计
+zh_worklog (验证|核验|认证|评估|计算)(协议|流程|环节)
+zh_worklog 认证(的)?(上界|下界|界|结果|解)
+zh_worklog 护栏|兜底|回退机制|重试
+zh_worklog (从未|没有|未被|未曾)(被)?触发
+zh_worklog 随机(数)?种子|种子(数|号|值)
+zh_worklog (求解器|收敛|可行性|最优性|绝对|相对)?容差
+zh_worklog 迭代(上限|次数上限)|时间上限
+zh_worklog 残差(为|小于|低于|不超过|在)
+zh_worklog (抖动项|正则化(项|参数|系数)?)(取|为|设为|设置为)
+zh_worklog 数值(验证|检验|核验|确认)|经(过)?数值(验证|检验)
+zh_worklog 脚本|代码文件
+
+# Coined labels (SKILL.md Rule 2): the script lists every "modifier + head noun" phrase built on the
+# head nouns below, with its count and whether the text defines, cross-references, or cites it.
+# Head lines are regex alternatives and are never matched alone. label_ok lines are full phrases
+# (lowercase, singular; a match at the end of a hyphenated phrase counts) that the check skips because
+# the field defines them; add your field's terms.
+@label_head label head nouns of coined labels such as "certification protocol"
+label_head protocols?
+label_head frameworks?
+label_head mechanisms?
+label_head pipelines?
+label_head paradigms?
+label_head architectures?
+label_head layers?
+label_head engines?
+label_head toolkits?
+label_head scaffold(s|ing)?
+label_head stacks?
+label_head loops?
+label_head suites?
+label_head guardrails?
+label_head safeguards?
+label_head workflows?
+label_head infrastructures?
+label_head machinery
+label_head apparatus
+label_head regimes?
+label_head taxonom(y|ies)
+
+@label_ok label established terms the coined-label check skips
+label_ok (attention|gating|pricing|allocation|auction|incentive|direct|truthful|selection|matching|voting) mechanism
+label_ok (hidden|input|output|convolutional|linear|dense|pooling|embedding|attention|recurrent|normalization|connected|softmax|dropout|residual|encoder|decoder|transformer|projection|classification|physical|link|network|transport|application) layer
+label_ok (network|neural|model|system|software|computer|transformer|encoder-decoder) architecture
+label_ok (control|inner|outer|feedback|for|while|event) loop
+label_ok (experimental|study|clinical|trial|treatment|communication|cryptographic|network|consensus|interview|sampling|survey) protocol
+label_ok (theoretical|conceptual|analytical|bayesian|regulatory|legal|modeling|modelling|software|deep learning|machine learning) framework
+label_ok (test|benchmark|evaluation) suite
+label_ok (data|processing|preprocessing|analysis|rendering|training|inference) pipeline
+label_ok (sampling|asymptotic|parameter|policy|trade|exchange-rate|exchange rate|flow|turbulent|laminar) regime
+label_ok (inference|search|game|physics|rendering|database) engine
+label_ok (software|research|computing|transport|transportation|energy|digital) infrastructure
+
+@zh_label_head label 拼凑标签的中心词，如"认证协议""保障机制"
+zh_label_head 机制
+zh_label_head 体系
+zh_label_head 框架
+zh_label_head 范式
+zh_label_head 闭环
+zh_label_head 协议
+zh_label_head 架构
+zh_label_head 护栏
+zh_label_head 底座
+zh_label_head 中台
+zh_label_head 飞轮
+zh_label_head 管线
+zh_label_head 流水线
+
+@zh_label_ok label 有定义的术语，拼凑标签检查跳过
+zh_label_ok (注意力|门控|定价|分配|拍卖|激励|匹配|投票|选择|传导|作用|形成|反应)机制
+zh_label_ok (理论|概念|分析|研究|贝叶斯|监管|法律|建模)框架
+zh_label_ok (网络|模型|系统|软件|计算)架构
+zh_label_ok (通信|加密|网络|共识|实验|临床|访谈|调查)协议
+zh_label_ok (指标|评价|理论|知识|标准|学科|课程)体系
+zh_label_ok (控制|反馈)闭环

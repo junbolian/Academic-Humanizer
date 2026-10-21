@@ -1,10 +1,10 @@
 ---
 name: academic-humanizer
-description: Edit or draft academic prose so it reads as precise human scholarship. Covers journal and conference papers in any field, theses, rebuttals, referee response letters, grant proposals, and Chinese academic text. Removes AI stock phrases, invented contrasts (not X but Y, 不是……而是), cue colons, meta-narrative, defensive hedging, figurative language, em dashes, repeated sentence skeletons, translationese, and disconnected flow. States each claim at the strength its evidence or proven result supports, and keeps every number, equation, citation key, label, formal statement, and genuine qualifier unchanged and verifies this with a bundled script. Use whenever the user asks to polish, proofread, tighten, rewrite, humanize, 润色, 改写, 去AI味, or make a manuscript read more naturally, and whenever the assistant drafts new manuscript text.
+description: Edit or draft academic prose so it reads as precise human scholarship. Covers journal and conference papers in any field, theses, rebuttals, referee response letters, grant proposals, and Chinese academic text. Removes AI stock phrases, invented contrasts (not X but Y, 不是……而是), cue colons, meta-narrative, defensive hedging, figurative language, undefined coined labels (certification protocol, 保障机制), methods and proofs written as work logs, em dashes, repeated sentence skeletons, translationese, and disconnected flow. States each claim at the strength its evidence or proven result supports, and keeps every number, equation, citation key, label, formal statement, and genuine qualifier unchanged and verifies this with a bundled script. Use whenever the user asks to polish, proofread, tighten, rewrite, humanize, 润色, 改写, 去AI味, or make a manuscript read more naturally, and whenever the assistant drafts new manuscript text.
 license: MIT (see LICENSE.txt)
 compatibility: Agent Skills format. Works in Claude (apps and Claude Code), OpenAI Codex, ChatGPT skills, and any agent that reads SKILL.md. scripts/check_revision.py needs Python 3 and the standard library only.
 metadata:
-  version: "1.0"
+  version: "1.1"
 ---
 
 # Academic Humanizer
@@ -24,8 +24,8 @@ When the request does not settle the choice between polish and cleanup, use poli
 1. **Every change has a rule.** Each change corresponds to a numbered Rule below. A change without a rule is reverted. Taste in wording is not a rule.
 2. **Smallest sufficient change.** Within a sentence that matches a rule, change what the rule targets and leave the neighbouring words alone. Polish mode also allows Rules 8 and 9 to act on the same sentence.
 3. **Nothing added.** Names, institutions, roles, places, numbers, dates, orderings, quotations, sources, links, causal claims, motives, and examples enter the text only if the original or the user's material contains them. Every content word in the revision traces to one of those two sources. Concrete detail is the author's to supply, and a thin passage becomes a report item.
-4. **Nothing lost.** Claims, conclusions, concessions, and qualifiers that express real uncertainty stay: may, likely, typically, in some cases, under these conditions, 可能, 通常, 在某些情况下. Rule 7 removes two kinds of qualifier only, hedges on results that the text itself proves or reports and stacked duplicates, and the report lists each removal. `compare` lists every qualifier that disappears.
-5. **Fixed structure.** Heading levels, section order, paragraph count and order, lists, tables, figures, quotations, and code stay in place unless the user asks for structural change. Structural problems go into the report (Rule 11).
+4. **Nothing lost.** Claims, conclusions, concessions, and qualifiers that express real uncertainty stay: may, likely, typically, in some cases, under these conditions, 可能, 通常, 在某些情况下. Rule 7 removes two kinds of qualifier only, hedges on results that the text itself proves or reports and stacked duplicates, and the report lists each removal. Rule 11 removes engineering detail that no result depends on, and the report lists each removal with its numbers. `compare` lists every qualifier and number that disappears.
+5. **Fixed structure.** Heading levels, section order, paragraph count and order, lists, tables, figures, quotations, and code stay in place unless the user asks for structural change. Structural problems go into the report (Rule 12).
 
 ## Style reference first
 
@@ -39,7 +39,7 @@ SKILL_DIR is the folder that contains this file. Common locations are `~/.claude
 
 1. Save the original verbatim in a working folder, for example `ah/orig.tex`, or `.md` and `.txt` for other text. Record the document type, venue, language, and mode.
 2. Read the style reference, if one was supplied.
-3. Run `python3 SKILL_DIR/scripts/check_revision.py audit ah/orig.tex`. The output lists candidate AI-tell phrases with their lines, sentence patterns, dashes, semicolon and parenthesis density, long sentences, runs of very short sentences, and the section and result structure. Each hit is a candidate for a decision. "Robust" is correct in a paper on robust statistics, and "navigation" is literal in a robotics paper.
+3. Run `python3 SKILL_DIR/scripts/check_revision.py audit ah/orig.tex`. The output lists candidate AI-tell phrases with their lines, coined labels, sentence patterns, dashes, semicolon and parenthesis density, long sentences, runs of very short sentences, and the section and result structure. Each hit is a candidate for a decision. "Robust" is correct in a paper on robust statistics, and "navigation" is literal in a robotics paper.
 4. Read the full text before changing anything. Identify each paragraph's single point and how it follows from the paragraph before, since flow problems show at this level.
 5. Rewrite under the Rules and the edit discipline. Cleanup mode touches only sentences with a rule match.
 6. Save the revision next to the original and run `python3 SKILL_DIR/scripts/check_revision.py compare ah/orig.tex ah/revised.tex --changes`. The script compares numbers, citation keys, `\ref` and `\label` keys, math, the text of formal environments, and the preamble. It then lists lost qualifiers, new capitalized terms, new quoted strings, and every changed sentence, and audits the revision against the original. Revert each unintended difference, match each changed sentence to a rule, and repeat until only intended differences remain.
@@ -77,6 +77,14 @@ Established technical terms stay even when they began as metaphors: bottleneck, 
 The rule exists for checkability. Metaphor as such does not separate model output from human writing, and human writers of Chinese nonfiction use more of it (see "Not reasons to change"). Apply it to papers, theses, reports, and letters. In essays and popular writing where figurative language belongs to the genre, follow the style reference.
 
 The paper's title and the names the authors gave to models, policies, and effects stay. A figurative name gets one mention in the report, and the decision stays with the author.
+
+**Coined labels.** Generated text often names an ordinary step with an abstract modifier and a system noun: "certification protocol", "verification layer", "safeguard mechanism", "trust framework", "evaluation pipeline", 认证协议, 保障机制, 治理闭环. The label reads like a component the reader should already know, yet the text never defines it, cites a source for it, or uses it again as a component, and it often stands for a single check. The script's "Coined labels" section lists each such phrase with its count and with whether the text defines, cross-references, or cites it. Decide each one:
+
+- A term the field defines (attention mechanism, clinical trial protocol, incentive mechanism, hidden layer), or a term the paper defines and reuses, stays. A name the authors gave their own method also stays and gets one mention in the report when it says less than the method does.
+- When the text states what the label does, replace the label with that statement. "Each solution then passes a certification protocol" becomes "We then check each solution for feasibility and recompute its objective with the exact solver" when both steps appear elsewhere in the text.
+- When the text never states what the label does, keep the label and add a report suggestion: name the steps it consists of, or use the plain noun for what happens ("the check", "the second review"). Never supply the steps yourself.
+- A modifier that asserts a property, such as certified, verified, guaranteed, safe, or robust, is a claim. Check it under Rules 5 and 6: "certification" promises a guarantee that a proof or a stated procedure must back.
+- A label that renames an object the text already names goes back to that name (Rule 8). A revision never introduces a label, and `compare` lists every label that is absent from the original.
 
 ### 3. Punctuation: no dashes, few semicolons and parentheses
 
@@ -126,7 +134,7 @@ Each pattern below appears at a clearly higher rate in model output than in huma
 - A sentence that restates a result carries its conditions: the assumptions, the class of methods, the parameter region, and whether the result is asymptotic. "The estimator is unbiased" becomes "Under Assumptions 1 and 2, the estimator is unbiased when the sampling fraction exceeds the threshold in Proposition 3." Use the paper's notation and names and introduce no new symbols.
 - Check each quantifier against the statement: optimal, always, never, robust, for any. A result that depends on a functional form or a distribution, such as linearity or normal errors, says so wherever the introduction or the conclusion states it.
 - Practical implications are conditional comparative statics with a direction and a source: "The number of sampling rounds needed for a given precision decreases in the capture probability and increases in the heterogeneity across strata (Proposition 4)." Advice such as "practitioners should carefully balance cost and precision" says less than the proposition it replaces.
-- Theorems, propositions, and lemmas are never added, removed, merged, or promoted. Suggestions about their number go into the report (Rule 11).
+- Theorems, propositions, and lemmas are never added, removed, merged, or promoted, except that Rule 11 states a computer-assisted proof step as a lemma. Suggestions about their number go into the report (Rule 12).
 
 ### 7. Stance: assert what the evidence supports
 
@@ -177,7 +185,24 @@ The features below look like AI writing to many readers, but corpus measurements
 | Few function words or colloquial connectives | Models use fewer, but added function words cannot be verified and push formal text toward speech. |
 | Metaphor as such | Human writers use about 2.4 times as many. |
 
-### 11. Structure audit, reported and changed only on request
+### 11. Write methods and proofs as a paper, not as a work log
+
+Generated methods sections and proofs often read as a record of running code: a "pipeline" of stages, a "verification protocol", a "sanity check", an "audit" of the results, a "certified bound", the tolerance a solver used, a guard that never fired. A paper states the method, the result, and the argument that establishes the result. Polish and draft modes apply this rule. Cleanup mode changes nothing under it and lists each item in the report.
+
+- **Framing.** Methods and proofs do not use protocol, pipeline, workflow, sanity check, audit, certified bound, verification layer, or guardrail as framing. Name the object instead: the estimator, the algorithm, the bound in Proposition 2, Lemma 3. "A sanity check confirms that the bound holds" becomes the lemma or the computation that shows it holds. A bound is called certified only when a proof or an exact computation in the text establishes it, and then the text states it as a result with its proof. Terms the field defines stay, as in Rule 2: clinical trial protocol, cryptographic protocol, interval arithmetic.
+- **Computer-assisted steps.** A proof step that rests on a computation is stated as a lemma and proved. The statement gives the inequality or identity, its domain, and its constants, all taken from the claim the text already makes. The proof says what was computed and by which method, and it says whether the computation is exact or numerical. Exact means symbolic, rational, or interval arithmetic, and the lemma is then proven. Numerical means floating point: the result is evidence, not proof, and the statement says "numerically" and is not called proven. The proof names the software and version when the original gives them. When the text does not say which kind of computation was used, insert `[[EVIDENCE: exact or floating-point computation, and the software used]]`. Adding such a lemma is the one exception to the last item of Rule 6. The report lists each new lemma, and `compare` lists it as a changed formal environment.
+- **Engineering detail to delete.** Remove detail about running the code that no reported result depends on:
+  - regularization or jitter values added for numerical stability that are not part of the model;
+  - guards, safeguards, fallbacks, and retries that never triggered;
+  - random-number arrangements, such as which seed went to which run or how streams were split;
+  - solver tolerances, iteration caps, and time limits;
+  - verification residuals and other self-checks of the computation ("the residual is below 10^{-12}");
+  - names of scripts, functions, files, directories, and environments;
+  - accounts of debugging, reruns, and failed runs.
+- **Reproduction information to keep.** Keep every value a reported result depends on: model parameters and hyperparameters, sample sizes, the number of replications or runs, data sources and versions, the algorithm and its stopping rule or tolerance when a reported gap, error, or runtime depends on it, the software and version behind a computer-assisted proof, the hardware when runtimes are reported, and the availability statement for code and data. A value that might belong to the model stays, and the report asks the author about it. The report suggests moving deleted detail to the code repository or a reproducibility appendix, and never moves it there itself.
+- **Deleted numbers.** Every number removed under this rule appears in the report as an intended change, with its original line. `compare` lists it under numbers removed.
+
+### 12. Structure audit, reported and changed only on request
 
 Use the script's structure output and a full reading. Report:
 
@@ -206,8 +231,10 @@ Use the script's structure output and a full reading. Report:
 - No invented contrast, cue colon, list lead-in, restatement sentence, spoken opener, meta-narrative sentence, preview, or recap remains outside the conclusion section.
 - No adjacent sentences share one skeleton, and no paragraph pads its point with parallel cases.
 - No dash used as punctuation, no paragraph crowded with semicolons or asides, and no figurative or persona label outside established terms.
+- Every coined label is an established or defined term, has been replaced by what it does, or appears in the report with a suggestion, and the revision adds none.
 - Summary phrases with a specific value nearby now carry that value, and nominalized verbs are restored.
 - Empirical verbs match their evidence, proven results carry their conditions, and established results read as established, without apology or defence.
+- Methods and proofs describe the method and the argument, not the running of code. Computer-assisted steps are lemmas that say whether the computation is exact or numerical, deleted engineering detail is in the report with its numbers, and every value a reported result depends on remains.
 - Every missing piece of evidence is a placeholder in polish mode or a report item in cleanup mode, and any remaining placeholder is announced at the top of the report as blocking submission.
 - None of the "Not reasons to change" features was edited for its own sake.
 - `compare` reports numbers, citation keys, labels, math, and formal statements unchanged, or lists each difference as intended.
@@ -221,5 +248,6 @@ Use the script's structure output and a full reading. Report:
    - changes grouped by Rule, with counts;
    - claims scoped, strengthened under Rule 7, or given evidence pointers;
    - every placeholder the author must fill, and in cleanup mode every claim that needs evidence;
-   - structural issues (Rule 11) and figurative names chosen by the author (Rule 2);
+   - engineering detail deleted under Rule 11, each item with its numbers and original line, values kept because they might belong to the model, and computer-assisted steps restated as lemmas;
+   - structural issues (Rule 12), figurative names chosen by the author, and coined labels kept without a definition, each with a suggested fix (Rule 2);
    - the final `compare` result for numbers, citation keys, labels, math, formal statements, and qualifiers.

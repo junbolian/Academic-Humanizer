@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-check_revision.py (academic-humanizer v1.0)
+check_revision.py (academic-humanizer v1.1)
 
 Deterministic checks behind the skill's promises, so that "no number, citation or
 equation was changed" is verified rather than self-reported.
@@ -9,21 +9,24 @@ equation was changed" is verified rather than self-reported.
   python3 check_revision.py compare ORIGINAL REVISED [--changes]
 
 audit    Candidate AI-tell phrases (from ../references/lexicon.txt), [[EVIDENCE: ...]]
-         placeholders, sentence patterns (adjacent sentences with one skeleton, dense
-         inline lists, list lead-in lines, ordinal headings, paragraph openings without
-         a referent, signpost connectives opening consecutive paragraphs, paragraphs
-         crowded with semicolons or parenthetical asides), dashes used as punctuation, sentences over the length limit, runs of very short sentences,
-         stacked additive connectives, and the section/result structure of LaTeX or
-         Markdown input.
+         placeholders, coined labels (modifier + system noun such as "certification
+         protocol", with whether the text defines or cites each), sentence patterns
+         (adjacent sentences with one skeleton, dense inline lists, list lead-in lines,
+         ordinal headings, paragraph openings without a referent, signpost connectives
+         opening consecutive paragraphs, paragraphs crowded with semicolons or
+         parenthetical asides), dashes used as punctuation, sentences over the length
+         limit, runs of very short sentences, stacked additive connectives, and the
+         section/result structure of LaTeX or Markdown input.
 compare  Checks that numbers, citation keys, \\ref/\\label keys, math, the text of formal
          environments (definition, assumption, theorem, proposition, lemma, corollary,
          ...) and the LaTeX preamble are unchanged. Then reports conservation warnings
          (qualifiers that disappeared, capitalized terms and quoted strings that are new)
          and how many sentences changed; --changes prints every changed sentence so that
          each can be matched to a rule. Finally audits REVISED with counts relative to
-         ORIGINAL. Exit status 1 if any invariant changed; warnings do not change the
-         exit status. The contents of [[EVIDENCE: ...]] placeholders are excluded from
-         these checks and listed.
+         ORIGINAL, including coined labels that the original does not contain. Exit
+         status 1 if any invariant changed; warnings do not change the exit status. The
+         contents of [[EVIDENCE: ...]] placeholders are excluded from these checks and
+         listed.
 
 Both modes end with a NOT READY TO SUBMIT line while any [[EVIDENCE: ...]]
 placeholder remains in the checked (or revised) file.
@@ -72,6 +75,25 @@ SECT_RE = re.compile(r'\\(part|chapter|section|subsection|subsubsection|paragrap
 ADDITIVE = re.compile(r'^(moreover|furthermore|additionally|in addition|also|besides)\b', re.I)
 CJK = re.compile(r'[\u4e00-\u9fff]')
 PLACEHOLDER_RE = re.compile(r'\[\[EVIDENCE:.*?\]\]', re.S)
+
+# coined labels (SKILL.md Rule 2): modifier + system noun such as "certification protocol" or 保障机制.
+# Words that cannot be the modifier of a coined label; the head nouns come from the lexicon.
+LABEL_STOP = set('''a an the this that these those its their our his her my your which whose what
+of in on for to with by as from into onto via at and or but nor than then is are was were be been
+being we it they each every any all some such same other another both either neither no not one two
+three four five several many few multiple more most less new novel proposed existing overall general
+standard simple whole entire above below following previous prior current present first second third
+final main key core basic additional further given resulting corresponding respective underlying
+single complete full larger smaller different specific particular own use uses used using
+apply applies applied applying adopt adopts adopted build builds built design designs designed
+develop develops developed introduce introduces introduced presents presented propose
+proposes provide provides provided'''.split())
+ZH_LABEL_STOP = re.compile(r'[的了个种一该此本其和与及等在对为是将把被由从这那各每套项类]')
+LABEL_DEF_EN = re.compile(r"\b(?:we (?:call|term|name|define|denote|refer to)|(?:is|are) (?:defined|called|termed|"
+                          r"known|referred to)|called|termed|dubbed|hereafter|henceforth|consists? of|comprises?|"
+                          r"is composed of|defined (?:in|as))\b", re.I)
+LABEL_DEF_ZH = re.compile(r'称为|称之为|定义为|记为|简称|是指|指的是|由.{1,20}组成|包括')
+LABEL_ACRONYM = re.compile(r'\s*\(\s*[A-Z][A-Za-z]*[A-Z]s?\s*\)')
 
 # sentence-pattern checks (SKILL.md Rule 4; references/chinese.md Rule 11)
 ZH_COMMENT_OPEN = re.compile(r'^(?:听起来|看起来|看上去|听上去|说白了|说到底|换句话说|意味着|值得注意|'
@@ -407,6 +429,60 @@ class Doc:
                     hits.append((cat, m.group(0).lower(), ln, window(clean, m.start(), m.end())))
         return hits
 
+    def coined_labels(self, lex):
+        """Modifier + system-noun labels: {label: {'n', 'defined', 'cited', 'first': (line, context)}}."""
+        out = collections.OrderedDict()
+        def_bodies = [t for kind, t, _ in self.formal if kind in ('definition', 'defn', 'dfn')]
+        for _, ln, s in self.sentences():
+            for rx, zh in ((lex.label_re, False), (lex.zh_label_re, True)):
+                if rx is None:
+                    continue
+                for m in rx.finditer(s):
+                    start, label = self._label(s, m, zh)
+                    if label is None:
+                        continue
+                    if zh and any(ok.search(s[max(0, m.start() - 8):m.end()]) for ok in lex.zh_label_ok):
+                        continue
+                    if not zh and any(ok.search(label) for ok in lex.label_ok):
+                        continue
+                    e = out.setdefault(label, {'n': 0, 'defined': False, 'cited': False,
+                                               'first': (ln, window(s, start, m.end(), 40))})
+                    e['n'] += 1
+                    if self._label_defined(s, m, label, zh, def_bodies):
+                        e['defined'] = True
+                    after = s[m.end():m.end() + 40]     # a citation attached to the label itself
+                    if ('[cite]' in after or AY_PAREN.match(after.lstrip()) or NUMCITE.match(after.lstrip())
+                            or PANDOC_CITE.match(after.lstrip())):
+                        e['cited'] = True
+        return out
+
+    @staticmethod
+    def _label(s, m, zh):
+        """(start, normalized label) for the head noun matched by m, or (start, None)."""
+        if zh:
+            mod = s[max(0, m.start() - 2):m.start()]
+            if len(CJK.findall(mod)) < 2 or ZH_LABEL_STOP.search(mod):
+                return m.start(), None
+            return m.start() - 2, mod + m.group(0)
+        p = re.search(r"(?<![A-Za-z-])([A-Za-z][A-Za-z-]*[A-Za-z])\s+$", s[:m.start()])
+        if not p or p.group(1).lower() in LABEL_STOP:
+            return m.start(), None
+        mod, head = p.group(1), m.group(0)
+        h = head.lower()
+        if h.endswith('ies'):
+            h = h[:-3] + 'y'
+        elif h.endswith(('sses', 'xes', 'ches', 'shes', 'lenses')):
+            h = h[:-2]
+        elif h.endswith('s') and not h.endswith(('ss', 'us', 'is', 'lens')):
+            h = h[:-1]
+        return p.start(1), '%s %s' % (mod.lower(), h)
+
+    @staticmethod
+    def _label_defined(s, m, label, zh, def_bodies):
+        defn = LABEL_DEF_ZH if zh else LABEL_DEF_EN
+        return bool(defn.search(s) or '[ref]' in s or LABEL_ACRONYM.match(s, m.end())
+                    or any(label in ' '.join(t.lower().split()) for t in def_bodies))
+
     def dash_hits(self):
         def em(m):
             s, line = m.group(0), m.string
@@ -667,6 +743,7 @@ class Doc:
 class Lexicon:
     def __init__(self, path):
         self.patterns, self.kind, self.desc = [], {}, {}
+        self.label_heads, self.zh_label_heads, self.label_ok, self.zh_label_ok = [], [], [], []
         with open(path, encoding='utf-8') as f:
             for raw in f:
                 line = raw.rstrip('\r\n')
@@ -680,7 +757,20 @@ class Lexicon:
                 parts = line.split(None, 1)
                 if len(parts) < 2:
                     continue
+                if self.kind.get(parts[0]) == 'label':    # feeds the coined-label check, not matched alone
+                    if parts[0].startswith('zh_') and parts[0].endswith('_ok'):
+                        self.zh_label_ok.append(re.compile('(?:%s)$' % parts[1]))
+                    elif parts[0].endswith('_ok'):          # also covers "self-attention layer"
+                        self.label_ok.append(re.compile(r'(?:^|[\s-])(?:%s)$' % parts[1], re.I))
+                    elif parts[0].startswith('zh_'):
+                        self.zh_label_heads.append(parts[1])
+                    else:
+                        self.label_heads.append(parts[1])
+                    continue
                 self.patterns.append((parts[0], re.compile(parts[1], re.I)))
+        self.label_re = re.compile(r"(?<![A-Za-z-])(?:%s)(?![A-Za-z])" % '|'.join(
+            self.label_heads), re.I) if self.label_heads else None
+        self.zh_label_re = re.compile('|'.join(self.zh_label_heads)) if self.zh_label_heads else None
 
 
 # ---------------------------------------------------------------- reporting
@@ -910,6 +1000,28 @@ def audit(D, lex, max_words, max_zh, verbose, base=None):
     if not D.placeholders:
         print('  none')
 
+    print('\n== Coined labels (SKILL.md Rule 2; keep established terms, replace or report the rest) ==')
+    labels = D.coined_labels(lex)
+    bare = [(k, v) for k, v in labels.items() if not v['defined'] and not v['cited']]
+    backed = [k for k, v in labels.items() if v['defined'] or v['cited']]
+    if base:
+        b_labels = base.coined_labels(lex)
+        b_bare = [k for k, v in b_labels.items() if not v['defined'] and not v['cited']]
+        print('  no definition or citation: %d -> %d' % (len(b_bare), len(bare)))
+    else:
+        print('  no definition or citation: %d' % len(bare))
+    for k, v in sorted(bare, key=lambda kv: (kv[1]['n'], kv[1]['first'][0]))[:40]:
+        print('      %-30s x%d  line %d: %s' % (k, v['n'], v['first'][0], v['first'][1]))
+    if backed:
+        print('  defined, cross-referenced, or cited: ' + ', '.join(
+            '%s x%d' % (k, labels[k]['n']) for k in backed[:30]))
+    if base:
+        new = [(k, v) for k, v in labels.items() if k not in b_labels]
+        if new:
+            print('  NEW in the revision (edit discipline: nothing added; revert unless the original names it):')
+            for k, v in new[:30]:
+                print('      %-30s line %d: %s' % (k, v['first'][0], v['first'][1]))
+
     print('\n== Sentence patterns (candidates; see SKILL.md Rule 4) ==')
     pc = D.pattern_checks()
     bpc = base.pattern_checks() if base else None
@@ -1010,6 +1122,11 @@ def placeholder_warning(D):
 
 
 def main():
+    # A console or pipe in a legacy code page (GBK on Chinese Windows) cannot encode every
+    # character the report prints, such as the math marker; print a replacement instead of failing.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, 'reconfigure'):
+            stream.reconfigure(errors='replace')
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('mode', choices=['audit', 'compare'])
     ap.add_argument('files', nargs='+')

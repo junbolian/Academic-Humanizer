@@ -4,7 +4,7 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-[PDF guide](docs/academic-humanizer-v1.0-en.pdf) · v1.0 · MIT License
+[PDF guide (v1.0)](docs/academic-humanizer-v1.0-en.pdf) · v1.1 · MIT License
 
 Academic Humanizer is an agent skill for editing and drafting manuscripts, theses, referee responses, and grant proposals in English and Chinese. It runs in Claude, OpenAI Codex, ChatGPT, and any agent that reads `SKILL.md`. A bundled checker verifies every edit, so the science in the text stays the science you wrote.
 
@@ -14,6 +14,8 @@ Academic Humanizer is an agent skill for editing and drafting manuscripts, these
 - **Sentence patterns typical of model output.** Invented contrasts ("The barrier is not technology but understanding"), cue colons ("The key insight is:"), restatement sentences ("This means that"), adjacent sentences built on one skeleton, rhetorical lists, and ordinal headings.
 - **Meta-narrative and defensive writing.** "In this section, we ...", "To summarize, ...", self-deprecation ("only a preliminary attempt"), and stacked hedges ("may potentially suggest").
 - **Figurative language and dashes.** Persona metaphors ("acts as a tireless reviewer"), figurative labels, and dashes used as punctuation.
+- **Coined labels.** An abstract modifier plus a system noun that the text never defines or cites, such as "certification protocol", "verification layer", or "safeguard mechanism". Each becomes what the text says it does. When the text never says, the report suggests what the author should state. Established terms such as "attention mechanism" stay.
+- **Methods and proofs written as work logs.** "Verification pipeline", "sanity check", "audit", "certified bound", solver tolerances, random seeds, guards that never triggered, and script names. Computer-assisted proof steps become lemmas that say whether the computation is exact or numerical. Every value a reported result depends on stays, and every deleted number is listed in the report.
 - **Claims that miss their evidence.** "Significantly" without a test, "optimal" where the theorem proves consistency, a vague "large gain" where the paper reports 3.1%, and hedges on results the paper itself proves.
 
 ## What it keeps

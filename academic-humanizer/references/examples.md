@@ -120,3 +120,39 @@ After:
 > Across 1,200 simulated populations, the stratified estimator has a mean relative error of 0.8% (standard error 0.1%), compared with 2.9% for the best unstratified estimator (Table 3).
 
 What changed: the opening sentence describes the section instead of stating a result, and the closing sentence recaps it (4.9). "Only a preliminary attempt" and "has several limitations" apologize without naming a limitation that bounds this result (Rule 7). "May potentially suggest ... could perform better" stacks three hedges on numbers the paper itself reports, so the result reads as a result (Rule 7). The population count comes from Table 3 in the running context. `compare` lists "may" and "suggest" as lost qualifiers and the new number 1,200, and the report records each as intended.
+
+## 11. Coined labels (Rules 2, 6)
+
+Context: Section 4.2 states that each heuristic solution is checked for feasibility and that its objective is recomputed with the exact solver. The text says nothing more about the "robustness layer", and no proposition covers it.
+
+Before:
+> Each heuristic solution then passes through our rigorous certification protocol, and a robustness layer filters the remaining candidates, ensuring trustworthy decisions.
+
+After:
+> We then check each heuristic solution for feasibility and recompute its objective with the exact solver (Section 4.2). A robustness layer filters the remaining candidates.
+
+Report item: "robustness layer" appears once and is never defined. State the filtering rule it applies, or name the step plainly ("a second filter"). "Robust" asserts a property that no result in the text supports (Rule 6).
+
+What changed: the text states what the "certification protocol" does, so the label becomes those two steps, and "rigorous" goes with it (Rule 1). "Certification" also promised a guarantee the procedure does not give (Rule 6). The text never says what the "robustness layer" does, so the label stays and the report asks the author to define it. Inventing a filtering rule would add content. "Ensuring trustworthy decisions" is a trailing evaluation (Rule 1) and goes. The section number comes from the running context, so the report records the new number 4.2 that `compare` lists as intended. `audit` lists both labels under "no definition or citation", and `compare` on a revision that added a label such as "validation pipeline" would list it as new.
+
+## 12. A proof written as a work log (Rule 11)
+
+Context: the proof of Theorem 2 needs $g(x) \ge 0.37$ on $[0,1]$, where $g$ is defined in (12). The text does not say whether the bound was computed exactly or in floating point. Table 2 reports estimation errors averaged over 200 replications with $n = 500$, and no reported number depends on the solver settings.
+
+Before:
+> Our verification pipeline proceeds in three stages. A sanity check confirms that $g(x) > 0$ on $[0,1]$, the residual was below $10^{-12}$, and the certified bound $g(x) \ge 0.37$ holds. We ran `verify_bound.py` with seed 42 for the first run and seed 7 for the second. A jitter of $10^{-8}$ was added to the diagonal, and the safeguard against singular matrices never triggered. The solver tolerance was $10^{-9}$ with an iteration cap of 5000. We report the mean over 200 replications with sample size $n = 500$ (Table 2).
+
+After:
+> **Lemma 4.** For all $x \in [0,1]$, $g(x) \ge 0.37$.
+>
+> *Proof.* We evaluate $g$ on $[0,1]$ by [[EVIDENCE: exact (interval or rational arithmetic) or floating-point computation, and the software used]].
+>
+> We report the mean over 200 replications with sample size $n = 500$ (Table 2).
+
+Report items:
+- Not ready to submit: the placeholder in the proof of Lemma 4 must say how $g$ was evaluated. With exact arithmetic, Lemma 4 is proven. With floating point, it becomes a numerical statement, and Theorem 2 then rests on numerical evidence, which its statement must say.
+- Deleted under Rule 11 as intended changes: the residual bound $10^{-12}$ (second sentence), the seeds 42 and 7 and the script name `verify_bound.py` (third), the jitter $10^{-8}$ and the safeguard that never triggered (fourth), and the solver tolerance $10^{-9}$ and iteration cap 5000 (fifth). These belong in the code repository or a reproducibility appendix if the venue asks for them.
+- Kept for reproduction: 200 replications and $n = 500$, since Table 2 depends on both.
+- Lemma 4 is new. Its statement is the bound the original text asserts. `compare` lists its number and its math as added, and in a `.tex` file it also lists the new lemma environment.
+
+What changed: "verification pipeline", "sanity check", and "certified bound" framed the proof as a run of code (Rule 11), so the bound becomes a lemma with a proof. "Certified" goes because nothing in the text shows an exact computation. "$g(x) > 0$" goes because Lemma 4 implies it. The seeds, jitter, safeguard, tolerance, iteration cap, residual, and script name describe how the code ran, and no reported result depends on them, so each is deleted and listed with its number.
