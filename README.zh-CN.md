@@ -4,7 +4,7 @@
 
 [English](README.md) | **简体中文**
 
-[中文 PDF 指南（v1.0）](docs/zh-CN/academic-humanizer-v1.0-zh.pdf) · [SKILL.md 中文译本](docs/zh-CN/SKILL.zh-CN.md) · v1.1 · MIT 许可
+[中文 PDF 指南](docs/zh-CN/academic-humanizer-v1.1-zh.pdf) · [SKILL.md 中文译本](docs/zh-CN/SKILL.zh-CN.md) · v1.1 · MIT 许可
 
 Academic Humanizer 是一个用于编辑和起草学术文本的智能体 skill，处理中英文论文、学位论文、审稿回复和基金申请书。它可以在 Claude、OpenAI Codex、ChatGPT 以及任何读取 `SKILL.md` 的智能体中运行。附带的核对脚本逐项检查每一次修改，保证文中的科学内容仍是作者写下的内容。
 

@@ -4,7 +4,7 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-[PDF guide (v1.0)](docs/academic-humanizer-v1.0-en.pdf) · v1.1 · MIT License
+[PDF guide](docs/academic-humanizer-v1.1-en.pdf) · v1.1 · MIT License
 
 Academic Humanizer is an agent skill for editing and drafting manuscripts, theses, referee responses, and grant proposals in English and Chinese. It runs in Claude, OpenAI Codex, ChatGPT, and any agent that reads `SKILL.md`. A bundled checker verifies every edit, so the science in the text stays the science you wrote.
 
